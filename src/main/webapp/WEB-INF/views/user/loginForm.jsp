@@ -3,12 +3,12 @@
 <%@ include file="../layout/header.jsp"%>
 <div class="body">
     <h2 style="margin:30px 0 80px 0;font-size: 3.45vw;text-align: center;"> sign in</h2>
-    <form class="login_form">
+    <form class="login_form" action="#" method="POST">
       <div class="form_gr">
-        <input type="text" name="loginId" placeholder="아이디" class="form_con" id="username">
+        <input type="text" name="username" placeholder="아이디" class="form_con" id="username">
       </div>
       <div class="form_gr">
-        <input type="password" name="passwordId" placeholder="비밀번호" class="form_con" id="password">
+        <input type="password" name="password" placeholder="비밀번호" class="form_con" id="password" >
       </div>
       <div class="form_check">
         <label>
@@ -17,9 +17,9 @@
         <a href="#" class="find">아이디/비밀번호 찾기</a>
       </div>
       <button type="submit" class="login_btn" id="btn-login">로그인</button>
-      <button type="submit" class="login_btn">회원가입</button>
       
     </form>
+    <button  class="login_btn">회원가입</button>
   </div>
 
 <%@ include file="../layout/footer.jsp"%>

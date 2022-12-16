@@ -8,6 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  
   <link rel="stylesheet" href="/css/header.css">
   <link rel="stylesheet" href="/css/footer.css">
   <link rel="stylesheet" href="/css/main.css">
@@ -22,12 +23,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;900&display=swap" rel="stylesheet"></head>
+  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+  <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+  <sec:authorize access="isAuthenticated()">
+    <script>
+    	alert("로그인이 된 사용자입니다.")
+    </script>
+  </sec:authorize>
 <body>
 
   <div id="nav-wrap">
     <nav class="navi">
       <div class="navContainer">
-          <a class="logo-area" href="#page-top"><h1>기부자들</h1></a>
+          <a class="logo-area" href="/"><h1>기부자들</h1></a>
           <button class="openMenu dnone" type="button" >
               Menu
           </button>
@@ -61,9 +69,18 @@
               </button>
               <ul class="user-ul">
                 <!--로그인-->
+                <c:choose>
+                <c:when test="${empty principal }">
                 <li>
-                  <a href="#"><i class="fa-solid fa-right-to-bracket"></i></a>
+                  <a href="/auth/loginForm"><i class="fa-solid fa-right-to-bracket"></i></a>
                 </li> 
+                </c:when>
+                <c:otherwise>
+                <li>
+                  <a href="#"><i class="fa-solid fa-left-to-bracket"></i></a>
+                </li>
+                </c:otherwise>
+                </c:choose>
                 <!--마이페이지-->
                 <li class="dnone">
                   <a href="#"><i class="fa-solid fa-user"></i></a>

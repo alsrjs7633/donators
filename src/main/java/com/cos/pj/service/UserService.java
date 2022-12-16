@@ -18,9 +18,5 @@ public class UserService {
 	public void 회원가입(Users user) {
 			userRepository.save(user);
 	}
-	@Transactional(readOnly=true)
-	public Users 로그인(Users user) {
-		return userRepository.findByUsernameAndPassword(user.getUsername()
-				,user.getPassword());
-	}
+	
 }
