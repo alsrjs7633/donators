@@ -56,6 +56,8 @@ public class Users {
 	@Column(nullable=false, length=50)
 	private String email;
 	
+
+	
 	//@ColumnDefault("'user'")
 	@Enumerated(EnumType.STRING)
 	private RoleType roles; //Enum을 쓰는게 좋다. //도메인 사용해야해서. 

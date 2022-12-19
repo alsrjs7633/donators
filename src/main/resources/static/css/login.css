@@ -5,8 +5,13 @@
 }
   .body{
     width:584px;
-    margin:0 auto;
+    margin:60px auto;
     
+  }
+  .body>p{
+  	text-align:center;
+  	margin:40px 0;
+  	font-size:43px;
   }
   .login_form{
     display:block;
