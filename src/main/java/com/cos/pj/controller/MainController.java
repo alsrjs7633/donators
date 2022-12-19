@@ -17,13 +17,33 @@ public class MainController {
 	public String payment() {
 		return "payment";
 	}
-	@GetMapping("/faq")
+	@GetMapping("/auth/faq")
 	public String faq() {
 		return "faq";
 	}
 	@GetMapping("/search")
 	public String search() {
 		return "search";
+	}
+	@GetMapping("/myPage")
+	public String myPage() {
+		return "myPage";
+	}
+	@GetMapping("/board")
+	public String board() {
+		return "board";
+	}
+	@GetMapping("/noticeBoard")
+	public String noticeBoard() {
+		return "noticeBoard";
+	}
+	@GetMapping("/findLoc")
+	public String findLoc() {
+		return "findLoc";
+	}
+	@GetMapping("/cart")
+	public String cart() {
+		return "cart";
 	}
 	
 	

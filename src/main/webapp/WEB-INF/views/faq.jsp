@@ -8,12 +8,12 @@
     </svg>
     <div id="myPage-info">
       <div id="info-text">
-        <H1>로그인</H1>
-        <h5>기부자들 로그인</h3>
+        <H1>FAQ</H1>
+        <h5>기부자들 FAQ</h3>
       </div>
       <div id="myPage-link">
         <a href="">Home</a>&nbsp;&nbsp;>&nbsp;&nbsp;
-        <a href="">로그인</a>
+        <a href="">FAQ</a>
       </div>
     </div>
   </div>

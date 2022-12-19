@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  
+  <link rel="stylesheet" href="/css/myPage.css">
   <link rel="stylesheet" href="/css/header.css">
   <link rel="stylesheet" href="/css/footer.css">
   <link rel="stylesheet" href="/css/main.css">
@@ -16,7 +16,10 @@
   <link rel="stylesheet" href="/css/search.css">
   <link rel="stylesheet" href="/css/join.css">
   <link rel="stylesheet" href="/css/login.css">
-  <link rel="stylesheet" href="/css/myPage.css">
+  <link rel="stylesheet" href="/css/board.css">
+  <link rel="stylesheet" href="/css/noticeBoard.css">
+  <link rel="stylesheet" href="/css/findLoc.css">
+  <link rel="stylesheet" href="/css/cart.css">
 
   <script  src="http://code.jquery.com/jquery-latest.min.js"></script><!-- jquery 최신버전 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -140,7 +143,7 @@
             <a href="#">찾아오시는 길</a>
           </li>
           <li>
-            <a href="#">FAQ</a>
+            <a href="/auth/faq">FAQ</a>
           </li>
         </ul>
       </div>
