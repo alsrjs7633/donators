@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="/css/join.css">
   <link rel="stylesheet" href="/css/login.css">
   
+  <script  src="/payment.js"></script>
   <script  src="http://code.jquery.com/jquery-latest.min.js"></script><!-- jquery 최신버전 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/ecb3ecb40d.js" crossorigin="anonymous"></script>
