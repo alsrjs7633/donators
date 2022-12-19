@@ -5,10 +5,12 @@
 }
 .footer{
   bottom:0px;
+  width:100%;
   padding:46px 0 58px;
   display:block;
   font-family: "Noto Sans KR";
   background-color: rgb(248, 249, 250);
+  
 }
 .footer_link{
   display:flex;

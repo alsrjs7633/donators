@@ -24,7 +24,7 @@ public class UserApiController {
 		System.out.println("UserApiController호출됨");
 		//user.setRoles(RoleType.USER);
 		//실제로 DB에 insert를 하고 아래에서(1자리에) return이 된다.
-		user.setRoles(RoleType.USER);
+//		user.setRoles(RoleType.USER);
 		
 		userService.회원가입(user);
 		return new ResponseDto<Integer>(HttpStatus.OK.value(),1);

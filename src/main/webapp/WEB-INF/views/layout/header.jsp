@@ -16,7 +16,8 @@
   <link rel="stylesheet" href="/css/search.css">
   <link rel="stylesheet" href="/css/join.css">
   <link rel="stylesheet" href="/css/login.css">
-  
+  <link rel="stylesheet" href="/css/myPage.css">
+
   <script  src="http://code.jquery.com/jquery-latest.min.js"></script><!-- jquery 최신버전 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/ecb3ecb40d.js" crossorigin="anonymous"></script>
@@ -26,9 +27,7 @@
   <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
   <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
   <sec:authorize access="isAuthenticated()">
-    <script>
-    	alert("로그인이 된 사용자입니다.")
-    </script>
+    <sec:authentication property="principal" var="principal"/>
   </sec:authorize>
 <body>
 
@@ -70,14 +69,14 @@
               <ul class="user-ul">
                 <!--로그인-->
                 <c:choose>
-                <c:when test="${empty principal }">
+                <c:when test="${empty principal}">
                 <li>
                   <a href="/auth/loginForm"><i class="fa-solid fa-right-to-bracket"></i></a>
                 </li> 
                 </c:when>
                 <c:otherwise>
                 <li>
-                  <a href="#"><i class="fa-solid fa-left-to-bracket"></i></a>
+                  <a href="/logout"><i class="fa-solid fa-right-to-bracket" style="transform: scaleX(-1);"></i></a>
                 </li>
                 </c:otherwise>
                 </c:choose>
