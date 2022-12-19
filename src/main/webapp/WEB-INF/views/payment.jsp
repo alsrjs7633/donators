@@ -1,10 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<<<<<<< HEAD
     <link rel="stylesheet" href="css/payment.css">
     <script  src="/payment.js"></script>
     <%@ include file="layout/header.jsp"%>
       
     
+=======
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/css/payment.css">
+</head>
+<body>
+
+>>>>>>> 3077161c97f708e0b719a7b497238b188af21519
 <div class="banner">
     <div class="banner_title">
      <h1>후원하기</h1>
@@ -19,7 +31,7 @@
       </div>
       <br>
       <div class="money_img">
-        <img src="../images/예치금Imoticon.png" alt="">
+        <img src="/images/예치금Imoticon.png" alt="">
       </div>
       <div class="money_now">  
         <p class="now">100,000<b>원</b></p>       
@@ -71,5 +83,5 @@
     <button type="submit" class="submit_button"  onclick="location.href='/' ">후원하기</button>
 
   </div>  
-      <%@ include file="layout/footer.jsp"%>
-  
+</body>
+</html>

@@ -1,8 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="layout/header.jsp"%>
-<link rel="stylesheet" href="css/funding.css">
- <div class="banner">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+  <link rel="stylesheet" type="text/css" href="/css/funding.css">
+</head>
+<body>
+<div class="banner">
     <div class="banner_title">
      <h1>정기후원</h1>
     </div>
@@ -29,7 +35,7 @@
     <li>
       <div class="first_box">
       <div class="a">
-        <img src="../images/kimsuhyun.jpg" height="180.77px" width="325.28px">
+        <img src="/images/kimsuhyun.jpg" height="180.77px" width="325.28px">
       </div>
       <div class="b">
         <strong class="ad_title">소년,소녀가장 돕기</strong>
@@ -46,7 +52,7 @@
     <li>
       <div class="second_box">
       <div class="a">
-        <img src="../images/zzangggae.jpg" height="180.77px" width="325.28px">
+        <img src="/images/zzangggae.jpg" height="180.77px" width="325.28px">
       </div>
       <div class="b">
         <strong class="ad_title">고아원에서 지내는 어린이</strong>
@@ -63,7 +69,7 @@
     <li>
       <div class="third_box">
       <div class="a">
-        <img src="../images/yuseyoon.jpg" height="180.77px" width="325.28px">
+        <img src="/images/yuseyoon.jpg" height="180.77px" width="325.28px">
       </div>
       <div class="b">
         <strong class="ad_title">아픈 어린이 돕기</strong>
@@ -78,5 +84,6 @@
     </li>
   </ul>
   </div>
-  <%@ include file="layout/footer.jsp"%>
   
+</body>
+</html>

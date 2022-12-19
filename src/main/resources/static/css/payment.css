@@ -3,7 +3,7 @@
   margin: 0;
 }
 .banner{
-  background-color: rgb(89, 171, 226);
+  background-color: rgb(28, 171, 226);
   height: 200px;
   width: 100%;
 }
@@ -14,7 +14,7 @@
   color: #fff;
   height: 73.56px;
 }
-.banner_title >h1{
+h1{
   font-size: 50px;
 }
 
