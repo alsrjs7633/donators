@@ -1,9 +1,10 @@
 package com.cos.pj.service;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.cos.pj.model.RoleType;
 import com.cos.pj.model.Users;
@@ -27,4 +28,5 @@ public class UserService {
 		userRepository.save(user); //하나의 트랜젝션
 	}
 	
+
 }

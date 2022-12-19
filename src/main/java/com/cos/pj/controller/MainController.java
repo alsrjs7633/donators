@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class mainController {
+public class MainController {
 
 	@GetMapping({"","/"})
 	//인증이 필요없는 곳에 /auth를 붙인다.
