@@ -124,13 +124,13 @@
       <div id="board-menu" class="dnone-menu dnone">
         <ul>
           <li>
-            <a href="#">공지사항</a>
+            <a href="/auth/noticeBoard">공지사항</a>
           </li>
           <li>
-            <a href="#">게시글 보기</a>
+            <a href="/auth/noticeBoard">게시글 보기</a>
           </li>
           <li>
-            <a href="#">후기</a>
+            <a href="/auth/noticeBoard">후기</a>
           </li>
         </ul>
       </div>
@@ -140,7 +140,7 @@
             <a href="#">소개글</a>
           </li>
           <li>
-            <a href="#">찾아오시는 길</a>
+            <a href="/auth/findLoc">찾아오시는 길</a>
           </li>
           <li>
             <a href="/auth/faq">FAQ</a>

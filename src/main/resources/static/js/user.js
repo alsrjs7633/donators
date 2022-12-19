@@ -21,7 +21,7 @@ let index={
 			name: $("#name").val(),
 			tel: $("#tel").val(),
 			birth: $("#birth").val(),
-			
+			agree: $("#phoneAgree").val()
 			
 		}
 		$.ajax({ 

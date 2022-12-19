@@ -33,11 +33,11 @@ public class MainController {
 	public String board() {
 		return "board";
 	}
-	@GetMapping("/noticeBoard")
+	@GetMapping("/auth/noticeBoard")
 	public String noticeBoard() {
 		return "noticeBoard";
 	}
-	@GetMapping("/findLoc")
+	@GetMapping("/auth/findLoc")
 	public String findLoc() {
 		return "findLoc";
 	}

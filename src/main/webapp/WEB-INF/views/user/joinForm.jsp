@@ -60,10 +60,10 @@
         <label class="form_name">정보 수신 동의(선택)</label>
         <div class="agree">
           <label class="inputCheck">
-            <input type="checkbox" name="phoneAgree" id="phoneAgree"> 모바일
+            <input type="checkbox" name="phoneAgree" id="phoneAgree" value=1> 모바일
           </label>
           <label class="inputCheck">
-            <input type="checkbox" name="emailAgree" id="emailAgree"> 이메일
+            <input type="checkbox" name="emailAgree" id="emailAgree" value=2> 이메일
           </label>
         </div>
       </div>

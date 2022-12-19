@@ -4,8 +4,8 @@
     <ul class="footer_link">
       <li><a href="#">이용약관</a></li>
       <li><a href="#">개인정보 처리방침</a></li>
-      <li><a href="#">오시는 길</a></li>
-      <li><a href="#">FAQ</a></li>
+      <li><a href="/auth/findLoc">오시는 길</a></li>
+      <li><a href="/auth/faq">FAQ</a></li>
       <li>후원문의 : 031-243-2111</li>
     </ul>
     <ul class="footer_addr">

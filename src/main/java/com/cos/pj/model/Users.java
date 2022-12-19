@@ -56,6 +56,8 @@ public class Users {
 	@Column(nullable=false, length=50)
 	private String email;
 	
+	@Column(nullable=true, length=3)
+	private int agree;
 
 	
 	//@ColumnDefault("'user'")

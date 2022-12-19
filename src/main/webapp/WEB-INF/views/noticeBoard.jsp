@@ -20,6 +20,18 @@
 </div>
     <div class="boardContainer">
     <h2 class="noTitle">고객센터</h2>
+    
+    <form class="board_form">
+      <c:choose>
+      <c:when test="${empty principal}">
+      </c:when>
+      <c:otherwise>
+      <button type=button class="board_btn" onclick="location.href='/board'">글쓰기</button>
+      </c:otherwise>
+      </c:choose>
+      <input type="text" class="search_board" id="search_board">
+      <button type="submit" class="board_btn">검색하기</button>
+    </form>
     <table class="boardt">
       <colgroup>
         <col class="colNum">
