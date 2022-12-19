@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <link rel="stylesheet" href="css/payment.css">
+    <script  src="/payment.js"></script>
     <%@ include file="layout/header.jsp"%>
+      
     
 <div class="banner">
     <div class="banner_title">
@@ -65,7 +68,7 @@
 
     <hr>
 
-    <button type="submit" class="submit_button">후원하기</button>
+    <button type="submit" class="submit_button"  onclick="location.href='/' ">후원하기</button>
 
   </div>  
       <%@ include file="layout/footer.jsp"%>

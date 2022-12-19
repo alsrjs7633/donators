@@ -38,7 +38,7 @@
         <p>소년 소녀 가장에게 도움을 줍니다.</p>
       </div>
       <div class="d">
-        <button type="button" color="yellow">후원하기</button>
+        <button type="button" color="yellow" onclick="location.href='/payment' ">후원하기</button>
       </div>
       </div>
     </li>
@@ -55,7 +55,7 @@
         <p>보육원에서 생활하는 어린이를 지원합니다.</p>
       </div>
       <div class="d">
-        <button type="button" color="yellow">후원하기</button>
+        <button type="button" color="yellow" onclick="location.href='/payment' ">후원하기</button>
       </div>
       </div>
     </li>
@@ -72,7 +72,7 @@
         <p>수술과 병원에 갈 수 있도록 도와줍니다.</p>
       </div>
       <div class="d">
-        <button type="button" color="yellow">후원하기</button>
+        <button type="button" color="yellow" onclick="location.href='/payment' ">후원하기</button>
       </div>
       </div>
     </li>

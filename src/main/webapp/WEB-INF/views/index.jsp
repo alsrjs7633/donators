@@ -78,7 +78,7 @@
 
   <section class="support">
     <p><strong>당신의 소중한 관심이 취약계층에겐 따뜻한 밥 한끼가 됩니다.</strong>&nbsp;&nbsp;&nbsp;
-      <button type="submit" id="submit"><a href="#">후원하기</a></button></p>
+      <button type="submit" id="submit" onclick="location.href='/payment' ">후원하기</button></p>
   </section>
 
 </div>

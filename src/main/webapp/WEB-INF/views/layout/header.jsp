@@ -34,24 +34,24 @@
           <div class="nav-menu" >
               <ul class="nav-ul">
                   <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="openSup()">
+                    <div class="nav-link" href="#" onclick="openSup()">
                       <span class="frame-btn__text">후원</span>
-                    </a>
+                    </div>
                   </li>
                   <li id="fundBtn" class="nav-item">
-                    <a class="nav-link" href="#"onclick="openFund()">
+                    <div class="nav-link" href="#"onclick="openFund()">
                       <span class="frame-btn__text">펀딩</span>
-                    </a>
+                    </div>
                   </li>
                   <li id="boardBtn" class="nav-item">
-                    <a class="nav-link" href="#"onclick="openBoard()">
+                    <div class="nav-link" href="#"onclick="openBoard()">
                       <span class="frame-btn__text">게시판</span>
-                    </a>
+                    </div>
                   </li>
                   <li id="infoBtn" class="nav-item">
-                    <a class="nav-link frame-btn" href="#"onclick="openInfo()">
+                    <div class="nav-link frame-btn" href="#"onclick="openInfo()">
                       <span class="frame-btn__text">소개</span>
-                    </a>
+                    </div>
                   </li>
               </ul>
               <button class="fast-sup">
