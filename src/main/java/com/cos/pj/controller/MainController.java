@@ -23,11 +23,33 @@ public class MainController {
 	public String payment() {
 		return "payment";
 	}
-	
-	@GetMapping({"/boardList"})
-	//인증이 필요없는 곳에 /auth를 붙인다.
-	public String boardList() {
-		return "boardList";
+	@GetMapping("/auth/faq")
+	public String faq() {
+		return "faq";
+	}
+	@GetMapping("/search")
+	public String search() {
+		return "search";
+	}
+	@GetMapping("/myPage")
+	public String myPage() {
+		return "myPage";
+	}
+	@GetMapping("/board")
+	public String board() {
+		return "board";
+	}
+	@GetMapping("/noticeBoard")
+	public String noticeBoard() {
+		return "noticeBoard";
+	}
+	@GetMapping("/findLoc")
+	public String findLoc() {
+		return "findLoc";
+	}
+	@GetMapping("/cart")
+	public String cart() {
+		return "cart";
 	}
 	
 	@GetMapping({"/boardDetail"})

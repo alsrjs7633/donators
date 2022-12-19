@@ -94,8 +94,8 @@
 .user-ul{
   display: flex;
   position: relative;
-  top: 5px;
-  right: 10px;
+  top: 14px;
+  right: -20px;
 }
 .user-ul li{
   margin-right: 20px;
