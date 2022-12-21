@@ -4,25 +4,53 @@ $(document).ready(function () {
         $('.jcheckOne').prop('checked',this.checked);
       });
       
+      
     });
     
+
 let index={
+	check: function(){//필수 입력사항 체크
+	  var ch1=$('#jch2').is(':checked');
+      var ch2=$('#jch1').is(':checked');
+      return ch1&&ch2;
+	},
+	pa:function(){//선택사항 체크시 1
+		if($('#phoneAgree').is(':checked')){
+			return 1;
+		}
+	},
+	ea:function(){//선택사항 체크시 1
+		if($('#emailAgree').is(':checked')){
+			return 1;
+		}
+	},
 	init: function(){
 		$("#join_save").on("click",()=>{
-			this.save();
+			if(index.check()){
+		this.save();
+		}else{
+			alert("약관에 동의해주세요");
+			location.href="/auth/joinForm"
+		}
+			
 		});
 		
 	},
+	
+
+
 	save: function(){
 		let data={
+			
 			username: $("#username").val(),
 			password: $("#password").val(),
 			email: $("#email").val(),
 			name: $("#name").val(),
 			tel: $("#tel").val(),
 			birth: $("#birth").val(),
-			agree: $("#phoneAgree").val()
-			
+			phoneagree: index.pa(),
+			emailagree: index.ea(),
+			gender: $("input[name='genderch']:checked").val()
 		}
 		$.ajax({ 
 			//회원가입 수행 요청 
@@ -42,7 +70,9 @@ let index={
 			//응답이 비정상
 		});
 	},
-	
-	
 }
+	
+
 index.init();
+
+

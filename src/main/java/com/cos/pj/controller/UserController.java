@@ -13,4 +13,6 @@ public class UserController {
 	public String loginForm() {
 		return "user/loginForm";
 	}
+	
+	
 }

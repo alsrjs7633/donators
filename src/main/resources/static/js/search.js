@@ -1,3 +1,6 @@
+
+
+
 const inputLeft = document.getElementById("input-left");
 const inputRight = document.getElementById("input-right");
 

@@ -30,11 +30,11 @@
       </div>
       <div class="form_group">
         <label class="form_name">비밀번호</label>
-        <input name="password" type="password" placeholder="Enter UserPassword" class="input_text" id=password>
+        <input name="password" type="password" placeholder="Enter UserPassword" class="input_text" id="password">
       </div>
       <div class="form_group">
         <label class="form_name">비밀번호 확인</label>
-        <input name="userPwdCheck" type="password" placeholder="Enter UserPassword" class="input_text">
+        <input name="userPwdCheck" type="password" placeholder="Enter UserPassword" class="input_text" id="passwordCh">
       </div>
       <div class="form_group">
         <label class="form_name">성명</label>
@@ -42,7 +42,7 @@
       </div>
       <div class="form_group">
         <label class="form_name">생년월일</label>
-        <input name="userBirth" type="number" placeholder="Enter UserBirth" class="input_text" id="birth">
+        <input name="userBirth" type="number" placeholder="Enter UserBirth 000000" class="input_text" id="birth">
       </div>
       <!--휴대폰 번호 인증 설정 안함-->
       <div class="form_group">
@@ -57,21 +57,41 @@
         <input name="userEmail" type="email" placeholder="Enter UserEmail" class="input_text" id="email">
       </div>
       <div class="form_group">
-        <label class="form_name">정보 수신 동의(선택)</label>
+        <label class="form_name">성별</label>
         <div class="agree">
           <label class="inputCheck">
-            <input type="checkbox" name="phoneAgree" id="phoneAgree" value=1> 모바일
+            <input type="radio" name="genderch" id="man" value="man"> 남
           </label>
           <label class="inputCheck">
-            <input type="checkbox" name="emailAgree" id="emailAgree" value=2> 이메일
+            <input type="radio" name="genderch"  id="woman" value="woman"> 여
           </label>
         </div>
       </div>
+      <div class="form_group">
+        <label class="form_name">정보 수신 동의(선택)</label>
+        <div class="agree">
+          <label class="inputCheck">
+            <input type="checkbox" name="phoneAgree" id="phoneAgree" > 모바일
+          </label>
+          <label class="inputCheck">
+            <input type="checkbox" name="emailAgree" id="emailAgree"> 이메일
+          </label>
+        </div>
+      </div>
+      
       <div class="form_proof">
         <label class="form_name">취약 계층 등록(선택)<br></label>
+        <div>
         <label class="form_name">증빙 서류 등록</label>
-        <input type="file" class="proof_file" name="proofFile">
+        <input type="file" class="proof_file"  name="proofFile" id="proofFile" multiple>
+        </div>
+        <div>
+        
+        <label class="form_name">증빙 사진 등록</label>
+        <input type="file" class="proof_file"  name="proofFile" id="proofFile" multiple>
+        </div>
       </div>
+      
       <div class="joinAgree">
         <h2 style="font-size:32px">약관 및 개인정보 수집,이용 동의</h2>
         <hr>
@@ -83,14 +103,14 @@
         </div>
         <div class="agree_check">
           <label class="agree_checkbox">
-            <input type="checkbox" name="policyAgree1" class="jcheckOne">
+            <input type="checkbox" name="policyAgree1" class="jcheckOne" id="jch2">
             [필수]웹사이트 이용약관 동의
           </label>
           <a href="#" class="anchorText">보기</a>
         </div>
         <div class="agree_check">
           <label class="agree_checkbox">
-            <input type="checkbox" name="policyAgree2" class="jcheckOne">
+            <input type="checkbox" name="policyAgree2" class="jcheckOne" id="jch1">
             [필수]개인저보 수집,이용 동의
           </label>
           <a href="#" class="anchorText">보기</a>

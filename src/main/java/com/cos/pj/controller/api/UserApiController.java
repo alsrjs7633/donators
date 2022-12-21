@@ -1,17 +1,20 @@
 package com.cos.pj.controller.api;
 
-import javax.servlet.http.HttpSession;
+import java.io.File;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.cos.pj.dto.ResponseDto;
-import com.cos.pj.model.RoleType;
 import com.cos.pj.model.Users;
 import com.cos.pj.service.UserService;
+
+import lombok.extern.java.Log;
+
 
 @RestController
 public class UserApiController {
@@ -31,5 +34,8 @@ public class UserApiController {
 		//result가 1이면 성공, -1이면 실패
 		//자바 오브젝트를 리턴받아옴
 	}
+	
+
+    
 	
 }

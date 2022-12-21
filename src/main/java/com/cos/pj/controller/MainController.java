@@ -29,14 +29,8 @@ public class MainController {
 	public String myPage() {
 		return "myPage";
 	}
-	@GetMapping("/board")
-	public String board() {
-		return "board";
-	}
-	@GetMapping("/auth/noticeBoard")
-	public String noticeBoard() {
-		return "noticeBoard";
-	}
+	
+	
 	@GetMapping("/auth/findLoc")
 	public String findLoc() {
 		return "findLoc";
@@ -45,6 +39,11 @@ public class MainController {
 	public String cart() {
 		return "cart";
 	}
+	@GetMapping("/searchUpload")
+	public String searchUpload() {
+		return "searchUpload";
+	}
+	
 	
 	
 }

@@ -39,6 +39,7 @@ public class Boards {
 	private int id;
 	@Column(nullable=false, length=100)
 	private String title;
+	
 	@Lob
 	//대용량 데이터
 	private String content;

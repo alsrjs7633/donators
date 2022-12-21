@@ -26,9 +26,9 @@ import lombok.NoArgsConstructor;
 	    , initialValue = 1
 	    , allocationSize = 1
 	)
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+@Data//getter,setter,tostring
+@AllArgsConstructor//여기 필드의 모든 생성자
+@NoArgsConstructor//기본생성자
 @Builder //빌더 패턴
 @Entity //Users 클래스가 자동으로 DB에 테이블이 생성이 된다.
 //@DynamicInsert //insert시에 null인 필드 제외
@@ -56,8 +56,14 @@ public class Users {
 	@Column(nullable=false, length=50)
 	private String email;
 	
-	@Column(nullable=true, length=3)
-	private int agree;
+	@Column(nullable=false, length=20)
+	private String gender;
+	
+	@Column(nullable=true, length=1)
+	private int phoneagree;
+	
+	@Column(nullable=true, length=1)
+	private int emailagree;
 
 	
 	//@ColumnDefault("'user'")

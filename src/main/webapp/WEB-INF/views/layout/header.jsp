@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="/css/noticeBoard.css">
   <link rel="stylesheet" href="/css/findLoc.css">
   <link rel="stylesheet" href="/css/cart.css">
+  <link rel="stylesheet" href="/css/boardDetail.css">
 
   <script  src="http://code.jquery.com/jquery-latest.min.js"></script><!-- jquery 최신버전 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -111,7 +112,7 @@
       <div id="fund-menu" class="dnone-menu dnone">
         <ul>
           <li>
-            <a href="#">1:3 같이 양육</a>
+            <a href="/search">1:3 같이 양육</a>
           </li>
           <li>
             <a href="#">1:5 같이 양육</a>
