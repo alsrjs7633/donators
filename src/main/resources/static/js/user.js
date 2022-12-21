@@ -28,6 +28,7 @@ let index={
 		$("#join_save").on("click",()=>{
 			if(index.check()){
 		this.save();
+		this.upload();
 		}else{
 			alert("약관에 동의해주세요");
 			location.href="/auth/joinForm"
@@ -41,7 +42,6 @@ let index={
 
 	save: function(){
 		let data={
-			
 			username: $("#username").val(),
 			password: $("#password").val(),
 			email: $("#email").val(),

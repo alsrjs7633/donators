@@ -78,13 +78,15 @@
           </label>
         </div>
       </div>
-      
       <div class="form_proof">
         <label class="form_name">취약 계층 등록(선택)<br></label>
         <div>
         <label class="form_name">증빙 서류 등록</label>
         <input type="file" class="proof_file"  name="proofFile" id="proofFile" multiple>
+        <button type="submit">업로드하기</button>
         </div>
+        
+        
         <div>
         
         <label class="form_name">증빙 사진 등록</label>
