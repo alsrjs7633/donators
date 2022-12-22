@@ -1,5 +1,7 @@
 package com.cos.pj.model;
 
+import java.sql.Timestamp;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,7 +14,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Table(name="uploadFiles")
+@Table(name="users")
 @SequenceGenerator(
 		name = "USER_SEQ_GENERATOR_U"
 	    , sequenceName = "USER_SEQ_U"
@@ -30,8 +32,8 @@ public class uploadFiles {
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="USER_SEQ_GENERATOR_U")
 	//프로젝트에 연결된 DB의 넘버링 전략을 사용
 	private int id;//시퀀스
-	private String username;
-	private String fileName;
-	private String fileOriName;
-	private String fileUrl;
+	private String title;
+	private String content;
+	private String filename;
+	private String filepath;
 }

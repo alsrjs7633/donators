@@ -29,4 +29,8 @@ public class BoardController {
 	public String boardDetail() {
 		return "boardDetail";
 	}
+	@GetMapping("/uploadFile")
+	public String uploadFiles() {
+		return "uploadFile";
+	}
 }

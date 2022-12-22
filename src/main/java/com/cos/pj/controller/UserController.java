@@ -13,6 +13,11 @@ public class UserController {
 	public String loginForm() {
 		return "user/loginForm";
 	}
-	
+	//중복체크 
+	@GetMapping("/idCheck")
+	public String idCheck() {
+		return "idCheck";
+	}
+
 	
 }

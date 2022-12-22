@@ -24,6 +24,36 @@ let index={
 			return 1;
 		}
 	},
+	//아이디 중복체크
+	doubleChk: function(){
+		$(".double_check").on("click",()=>{
+			this.doubleCheck();
+		})
+	},
+	doubleCheck: function(){
+		let data={
+			username: $("#username").val()
+			}
+		$.ajax({ 
+			//회원가입 수행 요청 
+			//(100초라 가정한다면 도중에 done이나 fail 실행 )
+			type:"POST",
+			url:"/idCheck",
+			data:JSON.stringify(data), //http body 데이터
+			contentType:"application/json; charset=utf-8",
+			dataType:"json" //자동으로 변환해주기 때문에 생략 가능
+			//응답의 결과가 문자열이 아닌 json으로 변환
+		}).done(function(resp){
+			alert("사용 가능합니다");
+			location.href="/";
+			//응답이 정상
+		}).fail(function(error){
+			alert("사용 불가능합니다");
+			//응답이 비정상
+		});
+	},
+	
+	//회원가입
 	init: function(){
 		$("#join_save").on("click",()=>{
 			if(index.check()){
@@ -38,7 +68,6 @@ let index={
 		
 	},
 	
-
 
 	save: function(){
 		let data={

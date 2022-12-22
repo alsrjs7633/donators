@@ -25,7 +25,7 @@
         <div class="idForm">
         <!-- 서버전송하는 id추가 -->
           <input name="username" type="text" placeholder="Enter UserId" class="input_id" id="username">
-          <button type="submit" class="double_check">중복확인</button>
+          <button type="button" class="double_check">중복확인</button>
         </div>
       </div>
       <div class="form_group">
@@ -78,6 +78,7 @@
           </label>
         </div>
       </div>
+      
       <div class="form_proof">
         <label class="form_name">취약 계층 등록(선택)<br></label>
         <div>
@@ -85,10 +86,7 @@
         <input type="file" class="proof_file"  name="proofFile" id="proofFile" multiple>
         <button type="submit">업로드하기</button>
         </div>
-        
-        
-        <div>
-        
+        <div>     
         <label class="form_name">증빙 사진 등록</label>
         <input type="file" class="proof_file"  name="proofFile" id="proofFile" multiple>
         </div>
