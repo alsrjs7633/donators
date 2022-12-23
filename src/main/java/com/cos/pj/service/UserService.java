@@ -27,11 +27,7 @@ public class UserService {
 		user.setRoles(RoleType.USER);
 		userRepository.save(user); //하나의 트랜젝션
 	}
-	@Transactional
-	public int 중복체크(Users user) {
-		 int cnt=userRepository.findByUsername(username,user.getUsername());
-		 return cnt;
-	}
+	 
 	
 	
 	

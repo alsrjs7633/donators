@@ -96,11 +96,11 @@
             <ul>
               <li><img
                   src="https://www.compassion.or.kr/resources/fo/compassion/assets/images/common/ico_children_birth.png">
-                <br>n살
+                <br><span>n살</span>
               </li>
               <li><img
                   src="https://www.compassion.or.kr/resources/fo/compassion/assets/images/common/ico_children_family.png">
-                <br>남자
+                <br><span>남자</span>
               </li>
             </ul>
           </div>

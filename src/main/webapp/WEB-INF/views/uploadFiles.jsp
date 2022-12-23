@@ -9,7 +9,7 @@
     <div id="myPage-info">
       <div id="info-text">
         <H1>펀딩</H1>
-        <h5>기부자들 펀딩</h3>
+        <h3>기부자들 펀딩</h3>
       </div>
       <div id="myPage-link">
         <a href="">Home</a>&nbsp;&nbsp;>&nbsp;&nbsp;
@@ -18,18 +18,19 @@
     </div>
   </div>
 </div>
-<form action="/upload" method="post" enctype="multipart/form-data">
-<div class="form_proof">
+<form id="fileForm" action="/upload" method="post" enctype="multipart/form-data">
+	<div class="form_proof">
         <label class="form_name">취약 계층 등록(선택)<br></label>
         <div>
         <label class="form_name">증빙 서류 등록</label>
         <input type="file" class="proof_file"  name="proofFile" id="proofFile" multiple>
         </div>
-        <div>     
+        <!--  <div>     
         <label class="form_name">증빙 사진 등록</label>
         <input type="file" class="proof_file"  name="proofFile" id="proofFile" multiple>
-        </div>
+        </div>-->
       </div>
-      <button type="submit">업로드하기</button>
+      
+      <button type="submit" id="upload_btn">업로드하기</button>
       </form>
 <%@ include file="layout/footer.jsp"%>

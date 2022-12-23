@@ -13,11 +13,12 @@ public class UserController {
 	public String loginForm() {
 		return "user/loginForm";
 	}
-	//중복체크 
-	@GetMapping("/idCheck")
-	public String idCheck() {
-		return "idCheck";
+	//업로드
+	@GetMapping("/uploadFiles")
+	public String uploadFiles() {
+		return "uploadFiles";
 	}
+	
 
 	
 }
