@@ -3,6 +3,7 @@ package com.cos.pj.controller.api;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -10,15 +11,15 @@ import java.util.UUID;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.io.FilenameUtils;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-@RestController
+@Controller
 public class FileUploadController {
-	 @PostMapping("/upload")
+	 @PostMapping(value={"/upload"})
      @ResponseBody
      public Map<String, Object> TestUploadUtil(HttpServletRequest req) throws IOException {
          
@@ -26,7 +27,7 @@ public class FileUploadController {
          MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) req;
          
          // 파일 디렉토리
-         String uploadDir = "C:\\Users\\GREEN\\Documents\\upload";
+         Path uploadDir = Paths.get("C:\\Users\\GREEN\\Documents\\upload");
          
          
          MultipartFile mFile = (MultipartFile) multipartRequest.getFileMap().values();
