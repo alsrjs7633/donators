@@ -35,7 +35,7 @@ import lombok.NoArgsConstructor;
 	)
 public class Boards {
 	@Id //기본키
-	 @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="USER_SEQ_GENERATOR2")
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="USER_SEQ_GENERATOR2")
 	private int id;
 	@Column(nullable=false, length=100)
 	private String title;

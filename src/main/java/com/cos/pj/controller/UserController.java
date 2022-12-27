@@ -14,10 +14,11 @@ public class UserController {
 		return "user/loginForm";
 	}
 	//업로드
-	@GetMapping("/uploadFiles")
-	public String uploadFiles() {
-		return "uploadFiles";
-	}
+//	@GetMapping("/uploadFiles")
+//	public String uploadFiles() {
+//		return "uploadFiles";
+//	}
+	
 	
 
 	

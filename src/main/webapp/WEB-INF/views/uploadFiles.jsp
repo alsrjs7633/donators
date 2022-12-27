@@ -18,7 +18,7 @@
     </div>
   </div>
 </div>
-<form id="fileForm" action="/upload" method="post" enctype="multipart/form-data">
+<form id="fileForm"  enctype="multipart/form-data">
 	<div class="form_proof">
         <label class="form_name">취약 계층 등록(선택)<br></label>
         <div>
@@ -29,8 +29,12 @@
         <label class="form_name">증빙 사진 등록</label>
         <input type="file" class="proof_file"  name="proofFile" id="proofFile" multiple>
         </div>-->
-      </div>
-      
-      <button type="submit" id="upload_btn">업로드하기</button>
+       </div>
       </form>
+      <button type="submit" id="upload_btn" onclick="javascript:fn_submit()">업로드하기</button>
+      <div>
+       <div class="img_wrap" style="width:600px;height:600px;">
+           <img id="img" />
+       </div>
+</div>
 <%@ include file="layout/footer.jsp"%>

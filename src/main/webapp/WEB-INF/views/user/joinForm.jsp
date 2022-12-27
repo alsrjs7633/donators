@@ -19,7 +19,7 @@
   </div>
 </div>
 <div class="container">
-    <form class="join_form">
+    <form class="join_form" method="POST">
       <div class="form_group">
         <label class="form_name">아이디</label>
         <div class="idForm">
@@ -41,7 +41,7 @@
         <input name="userName" type="text" placeholder="Enter UserName" class="input_text" id="name">
       </div>
       <div class="form_group">
-        <label class="form_name">생년월일</label>
+        <label class="form_name">나이</label>
         <input name="userBirth" type="number" placeholder="Enter UserBirth 000000" class="input_text" id="birth">
       </div>
       <!--휴대폰 번호 인증 설정 안함-->
@@ -68,6 +68,23 @@
         </div>
       </div>
       <div class="form_group">
+            <h3>지역</h3>
+            <div class="fil_select">
+              <select class="filt_select" id="area_select">
+                <option value="-1" selected>전체</option>
+                <option value="SE">서울</option>
+                <optino value="GE">경기도</optino>
+                <option value="GA">강원도</option>
+                <option value="CN">충청남도</option>
+                <option value="CB">충청북도</option>
+                <option value="GN">경상남도</option>
+                <option value="GB">경상북도</option>
+                <option value="JN">전라남도</option>
+                <option value="JB">전라북도</option>
+              </select>
+            </div>
+          </div>
+      <div class="form_group">
         <label class="form_name">정보 수신 동의(선택)</label>
         <div class="agree">
           <label class="inputCheck">
@@ -79,18 +96,7 @@
         </div>
       </div>
       
-      <div class="form_proof">
-        <label class="form_name">취약 계층 등록(선택)<br></label>
-        <div>
-        <label class="form_name">증빙 서류 등록</label>
-        <input type="file" class="proof_file"  name="proofFile" id="proofFile" multiple>
-        <button type="submit">업로드하기</button>
-        </div>
-        <div>     
-        <label class="form_name">증빙 사진 등록</label>
-        <input type="file" class="proof_file"  name="proofFile" id="proofFile" multiple>
-        </div>
-      </div>
+     
       
       <div class="joinAgree">
         <h2 style="font-size:32px">약관 및 개인정보 수집,이용 동의</h2>
@@ -118,7 +124,7 @@
       </div>
       <!-- join_save 추가 -->
     </form>
-          <button id="join_save" type="submit" class="join_btn">가입하기</button>
+          <button id="join_save" type="submit" class="join_btn" onclick="javascript:fn_submit()">가입하기</button>
 
   </div>
 

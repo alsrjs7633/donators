@@ -84,10 +84,12 @@
         </div>
       </div>
     </div>
+    
     <div class="search_ul">
+    <c:forEach  var="uploadFiles" items="${uploadFiles}">
       <div class="search_li">
         <div class="search_intro">
-          <h3>안녕하세요!<br>저는 AAA입니다</h3>
+          <h3>안녕하세요!<br>저는 ${uploadFiles.users.name}입니다</h3>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill"
             viewBox="0 0 16 16">
             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
@@ -96,11 +98,11 @@
             <ul>
               <li><img
                   src="https://www.compassion.or.kr/resources/fo/compassion/assets/images/common/ico_children_birth.png">
-                <br><span>n살</span>
+                <br><span>${uploadFiles.users.birth}</span>
               </li>
               <li><img
                   src="https://www.compassion.or.kr/resources/fo/compassion/assets/images/common/ico_children_family.png">
-                <br><span>남자</span>
+                <br><span>${uploadFiles.users.gender}</span>
               </li>
             </ul>
           </div>
@@ -115,156 +117,9 @@
           </div>
         </div>
       </div>
-      <div class="search_li">
-        <div class="search_intro">
-          <h3>안녕하세요!<br>저는 AAA입니다</h3>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill"
-            viewBox="0 0 16 16">
-            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-          </svg>
-          <div class="li_intro">
-            <ul>
-              <li><img
-                  src="https://www.compassion.or.kr/resources/fo/compassion/assets/images/common/ico_children_birth.png">
-                <br>n살
-              </li>
-              <li><img
-                  src="https://www.compassion.or.kr/resources/fo/compassion/assets/images/common/ico_children_family.png">
-                <br>남자
-              </li>
-            </ul>
-          </div>
-          <div class="support_btn">
-            <div class="cart_btn">
-              <button><img
-                  src="https://www.compassion.or.kr/resources/fo/compassion/assets/images/common/ico_button_cart.png"></button>
-            </div>
-            <div class="select_btn">
-              <button>바로 후원하기</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="search_li">
-        <div class="search_intro">
-          <h3>안녕하세요!<br>저는 AAA입니다</h3>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill"
-            viewBox="0 0 16 16">
-            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-          </svg>
-          <div class="li_intro">
-            <ul>
-              <li><img
-                  src="https://www.compassion.or.kr/resources/fo/compassion/assets/images/common/ico_children_birth.png">
-                <br>n살
-              </li>
-              <li><img
-                  src="https://www.compassion.or.kr/resources/fo/compassion/assets/images/common/ico_children_family.png">
-                <br>남자
-              </li>
-            </ul>
-          </div>
-          <div class="support_btn">
-            <div class="cart_btn">
-              <button><img
-                  src="https://www.compassion.or.kr/resources/fo/compassion/assets/images/common/ico_button_cart.png"></button>
-            </div>
-            <div class="select_btn">
-              <button>바로 후원하기</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="search_li">
-        <div class="search_intro">
-          <h3>안녕하세요!<br>저는 AAA입니다</h3>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill"
-            viewBox="0 0 16 16">
-            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-          </svg>
-          <div class="li_intro">
-            <ul>
-              <li><img
-                  src="https://www.compassion.or.kr/resources/fo/compassion/assets/images/common/ico_children_birth.png">
-                <br>n살
-              </li>
-              <li><img
-                  src="https://www.compassion.or.kr/resources/fo/compassion/assets/images/common/ico_children_family.png">
-                <br>남자
-              </li>
-            </ul>
-          </div>
-          <div class="support_btn">
-            <div class="cart_btn">
-              <button><img
-                  src="https://www.compassion.or.kr/resources/fo/compassion/assets/images/common/ico_button_cart.png"></button>
-            </div>
-            <div class="select_btn">
-              <button>바로 후원하기</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="search_li">
-        <div class="search_intro">
-          <h3>안녕하세요!<br>저는 AAA입니다</h3>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill"
-            viewBox="0 0 16 16">
-            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-          </svg>
-          <div class="li_intro">
-            <ul>
-              <li><img
-                  src="https://www.compassion.or.kr/resources/fo/compassion/assets/images/common/ico_children_birth.png">
-                <br>n살
-              </li>
-              <li><img
-                  src="https://www.compassion.or.kr/resources/fo/compassion/assets/images/common/ico_children_family.png">
-                <br>남자
-              </li>
-            </ul>
-          </div>
-          <div class="support_btn">
-            <div class="cart_btn">
-              <button><img
-                  src="https://www.compassion.or.kr/resources/fo/compassion/assets/images/common/ico_button_cart.png"></button>
-            </div>
-            <div class="select_btn">
-              <button>바로 후원하기</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="search_li">
-        <div class="search_intro">
-          <h3>안녕하세요!<br>저는 AAA입니다</h3>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill"
-            viewBox="0 0 16 16">
-            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-          </svg>
-          <div class="li_intro">
-            <ul>
-              <li><img
-                  src="https://www.compassion.or.kr/resources/fo/compassion/assets/images/common/ico_children_birth.png">
-                <br>n살
-              </li>
-              <li><img
-                  src="https://www.compassion.or.kr/resources/fo/compassion/assets/images/common/ico_children_family.png">
-                <br>남자
-              </li>
-            </ul>
-          </div>
-          <div class="support_btn">
-            <div class="cart_btn">
-              <button><img
-                  src="https://www.compassion.or.kr/resources/fo/compassion/assets/images/common/ico_button_cart.png"></button>
-            </div>
-            <div class="select_btn">
-              <button>바로 후원하기</button>
-            </div>
-          </div>
-        </div>
-      </div>
+      </c:forEach>
+      
+      
     </div>
     <div class="noti-paging">
       <ul class="noti-paging-li">

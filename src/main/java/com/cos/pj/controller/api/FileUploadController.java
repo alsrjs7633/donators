@@ -1,54 +1,102 @@
 package com.cos.pj.controller.api;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import java.io.File;
+import java.util.Calendar;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import org.apache.commons.io.FilenameUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
+
+import com.cos.pj.config.auth.PrincipalDetail;
+import com.cos.pj.dto.ResponseDto;
+import com.cos.pj.model.UploadFiles;
+import com.cos.pj.service.UploadService;
 
 @Controller
 public class FileUploadController {
-	 @PostMapping(value={"/upload"})
-     @ResponseBody
-     public Map<String, Object> TestUploadUtil(HttpServletRequest req) throws IOException {
-         
-         Map<String, Object> result = new HashMap<>();
-         MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) req;
-         
-         // 파일 디렉토리
-         Path uploadDir = Paths.get("C:\\Users\\GREEN\\Documents\\upload");
-         
-         
-         MultipartFile mFile = (MultipartFile) multipartRequest.getFileMap().values();
-             
-         UUID tempFileName = UUID.randomUUID(); 
-         String originalFileName = mFile.getOriginalFilename();        // 원본 파일명
-         String fileExt = FilenameUtils.getExtension(originalFileName);
-             
-         if(originalFileName.toLowerCase().endsWith(".tar.bz2")) {
-             fileExt = "tar.bz2";
-         } else if(originalFileName.toLowerCase().endsWith(".tar.gz")) {
-             fileExt = "tar.gz";
-         }
-         // 물리파일은 확장자를 제외하고 저장한다.
-         String logicalFileName = tempFileName.toString()+ "." + fileExt;
+    
+    
+    
+    @Autowired
+	private UploadService uploadService;
+	
+	
+	
+	private String path="C:\\Users\\GREEN\\Documents\\upload\\";
+    
+	@RequestMapping("/uploadFiles")
+    public String form()
+    {
+        return "uploadFiles";
+    }
+    
+    @RequestMapping(value="/upload", method=RequestMethod.POST)//requestbody 데이터 요청  uploadfiles 테이블에 uploadFilename-원본파일 dbFilename-날짜+파일이름
+    public String result(@RequestParam("proofFile") MultipartFile multi, Model model,@AuthenticationPrincipal PrincipalDetail principal)
+    {
+    	System.out.println("fileupload 호출");
+        String url = null;
+        
+        
+        try {
+ 
+//            String uploadpath = request.getServletContext().getRealPath(path);
+            String uploadpath = path;
+            String originFilename = multi.getOriginalFilename();
+            String extName = originFilename.substring(originFilename.lastIndexOf("."),originFilename.length());
+            long size = multi.getSize();
+            String saveFileName = genSaveFileName(extName);
             
-         byte[] fileBytes = mFile.getBytes(); // 파일을 바이트로 읽어온다.
-         Path filePath = uploadDir.resolve(logicalFileName);
-         Files.write(filePath, fileBytes); // 파일 생성
-         return result;
-             
-     }
+            System.out.println("uploadpath : " + uploadpath);
+            
+            System.out.println("originFilename : " + originFilename);
+            System.out.println("extensionName : " + extName);
+            System.out.println("size : " + size);
+            System.out.println("saveFileName : " + saveFileName);
+            
 
+            if(!multi.isEmpty())
+            {
+                File file = new File(uploadpath, saveFileName);
+                multi.transferTo(file);
+                uploadService.업로드(saveFileName,principal.getUser(),multi);
+                
+                model.addAttribute("filename", multi.getOriginalFilename());//원본 파일이름
+                model.addAttribute("uploadPath", file.getAbsolutePath());//업로드된 파일 이름
+                
+                return "/search";
+            }
+        }catch(Exception e)
+        {
+            System.out.println(e);
+        }
+        return "redirect:joinForm";
+    }
+    
+    // 현재 시간을 기준으로 파일 이름 생성
+    private String genSaveFileName(String extName) {
+        String fileName = "";
+        
+        Calendar calendar = Calendar.getInstance();
+        fileName += calendar.get(Calendar.YEAR);
+        fileName += calendar.get(Calendar.MONTH);
+        fileName += calendar.get(Calendar.DATE);
+        fileName += calendar.get(Calendar.HOUR);
+        fileName += calendar.get(Calendar.MINUTE);
+        fileName += calendar.get(Calendar.SECOND);
+        fileName += calendar.get(Calendar.MILLISECOND);
+        fileName += extName;
+        
+        return fileName;
+    }
 }

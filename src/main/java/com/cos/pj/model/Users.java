@@ -65,6 +65,8 @@ public class Users {
 	@Column(nullable=true, length=1)
 	private int emailagree;
 
+	@Column(nullable=false, length=10)
+	private String area;
 	
 	//@ColumnDefault("'user'")
 	@Enumerated(EnumType.STRING)
