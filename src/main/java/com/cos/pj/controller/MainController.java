@@ -1,6 +1,9 @@
 package com.cos.pj.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,8 +33,8 @@ public class MainController {
 		return "faq";
 	}
 	@GetMapping("/search")
-	public String search(Model model) {
-		model.addAttribute("uploadFiles",uploadService.글목록());
+	public String search(Model model,@PageableDefault(size=6,sort="id",direction=Sort.Direction.DESC) Pageable pageable) {
+		model.addAttribute("uploadFiles",uploadService.글목록(pageable));
 		return "search";
 	}
 	@GetMapping("/myPage")

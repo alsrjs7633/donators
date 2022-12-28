@@ -1,6 +1,6 @@
 
 
-
+//양방향 슬라이더 구현
 const inputLeft = document.getElementById("input-left");
 const inputRight = document.getElementById("input-right");
 
@@ -39,6 +39,46 @@ const setRightValue = () => {
 inputLeft.addEventListener("input", setLeftValue);
 inputRight.addEventListener("input", setRightValue);
 
+//필터 검색 구현부분
+//조건만 걸어두기
+$(".fil_search_btn").on("click",function(e){
+	if("${uploadFile.users.area}"=="${.filt_select}"){
+		if("${uploadFile.users.birth}">"${#input-left}"){// input left right 두개 비교
+			if("${uploadFile.users.birth}"<"${#input-right}"){
+				if("${uploadFile.users.gender}"=="input[name='genSelect']"){
+					
+				}
+			}
+		}
+	}
+	//${uploadFile.users.area}지역
+	//${uploadFile.users.birth}나이
+	//${uploadFile.users.gender}성별
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//토글하기
 $(".filter_btn").click(function() {
   $(this).next(".filter_toggle").stop().slideToggle(300);
   $(this).toggleClass('on').siblings().removeClass('on');

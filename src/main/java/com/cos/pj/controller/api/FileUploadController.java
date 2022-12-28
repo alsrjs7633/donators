@@ -33,8 +33,8 @@ public class FileUploadController {
 	
 	
 	
-	private String path="C:\\Users\\GREEN\\Documents\\upload\\";
-    
+	private String path="C:\\Users\\GREEN\\Documents\\workspace-spring-tool-suite-4-4.11.0.RELEASE\\pj\\src\\main\\resources\\static\\images";
+    //window->pref->general->workspace->refresh using hook 체크
 	@RequestMapping("/uploadFiles")
     public String form()
     {
@@ -71,8 +71,8 @@ public class FileUploadController {
                 multi.transferTo(file);
                 uploadService.업로드(saveFileName,principal.getUser(),multi);
                 
-                model.addAttribute("filename", multi.getOriginalFilename());//원본 파일이름
-                model.addAttribute("uploadPath", file.getAbsolutePath());//업로드된 파일 이름
+                model.addAttribute("filename", multi.getOriginalFilename());
+                model.addAttribute("uploadPath", file.getAbsolutePath());
                 
                 return "/search";
             }
