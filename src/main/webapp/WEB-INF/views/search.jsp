@@ -18,9 +18,12 @@
     </div>
   </div>
 </div>
- <div class="search_container">
 
+ <div class="search_container">
+ 
+ 
     <div class="search_filter">
+    
       <div class="filter_head">
         <button class="filter_btn">필터
           <div class="arrow-wrap">
@@ -29,18 +32,18 @@
           </div>
         </button>
 
-
-        <div class="filter_toggle" style="display:none">
+<form action="/search" method="GET" style="width:100%" class="filter_toggle" style="display:none">
+        <div class="filter_toggle" style="width:100%">
           <div class="filter">
             <h3>성별</h3>
             <ul class="fil_gen_ul">
-              <li class="gender_form"><input type="radio" id="gen1" name="genSelect" value="전체" checked>
+              <li class="gender_form"><input type="radio" id="gen1" name="genSelect" value="MW" checked>
                 <label for="gen1" class="fil_label">전체</label>
               </li>
-              <li class="gender_form"><input type="radio" id="gen2" name="genSelect" value="남자">
+              <li class="gender_form"><input type="radio" id="gen2" name="genSelect" value="M">
                 <label for="gen2" class="fil_label">남자</label>
               </li>
-              <li class="gender_form"><input type="radio" id="gen3" name="genSelect" value="여자">
+              <li class="gender_form"><input type="radio" id="gen3" name="genSelect" value="W">
                 <label for="gen3" class="fil_label">여자</label>
               </li>
             </ul>
@@ -50,9 +53,8 @@
             <div class="middle">
               <div class="multi-range-slider">
                 <!-- 진짜 슬라이더 -->
-                <input type="range" id="input-left" min="0" max="100" value="25" />
-                <input type="range" id="input-right" min="0" max="100" value="75" />
-
+                <input type="range" id="input-left" min="0" max="100" value="25" name="min_bir" />
+                <input type="range" id="input-right" min="0" max="100" value="75" name="max_bir" />
                 <!-- 커스텀 슬라이더 -->
                 <div class="slider">
                   <div class="track"></div>
@@ -66,10 +68,10 @@
           <div class="filter">
             <h3>지역</h3>
             <div class="fil_select">
-              <select class="filt_select">
+              <select class="filt_select" name="area_select">
                 <option value="-1" selected>전체</option>
                 <option value="SE">서울</option>
-                <optino value="GE">경기도</optino>
+                <option value="GE">경기도</optino>
                 <option value="GA">강원도</option>
                 <option value="CN">충청남도</option>
                 <option value="CB">충청북도</option>
@@ -80,10 +82,15 @@
               </select>
             </div>
           </div>
-          <button class="fil_search_btn">찾기</button>
+          
+          <button type="submit" class="fil_search_btn">찾기</button>
+          
         </div>
+        </form>
       </div>
+        
     </div>
+ 
  
     <div class="search_ul">
     <c:forEach  var="uploadFile" items="${uploadFiles.content}"><!-- .content=정해진 기능 -->
