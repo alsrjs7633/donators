@@ -33,6 +33,7 @@
         </label>
         <a href="#" class="find">아이디/비밀번호 찾기</a>
       </div>
+      <button type="button" class="login_btn" id="btn-login" >카카오 로그인</button>
       <button type="submit" class="login_btn" id="btn-login">로그인</button>
       
     </form>

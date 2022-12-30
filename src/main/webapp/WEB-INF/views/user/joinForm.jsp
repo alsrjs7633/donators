@@ -95,9 +95,7 @@
           </label>
         </div>
       </div>
-      
-     
-      
+
       <div class="joinAgree">
         <h2 style="font-size:32px">약관 및 개인정보 수집,이용 동의</h2>
         <hr>
