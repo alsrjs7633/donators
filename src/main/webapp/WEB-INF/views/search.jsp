@@ -37,7 +37,7 @@
           <div class="filter">
             <h3>성별</h3>
             <ul class="fil_gen_ul">
-              <li class="gender_form"><input type="radio" id="gen1" name="genSelect" value="MW" checked>
+              <li class="gender_form"><input type="radio" id="gen1" name="genSelect" value="O" checked>
                 <label for="gen1" class="fil_label">전체</label>
               </li>
               <li class="gender_form"><input type="radio" id="gen2" name="genSelect" value="M">
@@ -69,23 +69,24 @@
             <h3>지역</h3>
             <div class="fil_select">
               <select class="filt_select" name="area_select">
-                <option value="-1" selected>전체</option>
-                <option value="SE">서울</option>
-                <option value="GE">경기도</optino>
-                <option value="GA">강원도</option>
-                <option value="CN">충청남도</option>
-                <option value="CB">충청북도</option>
-                <option value="GN">경상남도</option>
-                <option value="GB">경상북도</option>
-                <option value="JN">전라남도</option>
-                <option value="JB">전라북도</option>
+                <option value="P" selected>전체</option>
+                <option value="A">서울</option>
+                <option value="B">경기도</optino>
+                <option value="C">강원도</option>
+                <option value="D">충청남도</option>
+                <option value="E">충청북도</option>
+                <option value="F">경상남도</option>
+                <option value="G">경상북도</option>
+                <option value="H">전라남도</option>
+                <option value="I">전라북도</option>
               </select>
             </div>
           </div>
           
-          <button type="submit" class="fil_search_btn">찾기</button>
           
         </div>
+                  <button type="submit" class="fil_search_btn">찾기</button>
+        
         </form>
       </div>
         
@@ -145,7 +146,7 @@
             class="bi bi-chevron-left" viewBox="0 0 16 16">
             <path fill-rule="evenodd"
               d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
-          </svg></li>
+          </svg></a></li>
         </c:when>
         <c:otherwise>
          <li><a href="?page=${uploadFiles.first}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -159,7 +160,7 @@
             class="bi bi-chevron-left" viewBox="0 0 16 16">
             <path fill-rule="evenodd"
               d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
-          </svg></li>
+          </svg></a></li>
         </c:otherwise>
         </c:choose>
         <c:choose>

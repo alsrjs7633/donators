@@ -10,6 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.cos.pj.model.UploadFiles;
 import com.cos.pj.model.Users;
 import com.cos.pj.repository.UploadRepository;
+import com.sun.istack.Nullable;
 
 @Service
 public class UploadService {
@@ -25,8 +26,10 @@ public class UploadService {
 		uploadfile.setUploadFileName(multi.getOriginalFilename());
 		uploadRepository.save(uploadfile);
 	}
+	
 
 	public Page<UploadFiles> 글목록(Pageable pageable){
+		
 		return uploadRepository.findAll(pageable);
 	}
 	
