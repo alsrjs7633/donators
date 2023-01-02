@@ -33,7 +33,7 @@
         </label>
         <a href="#" class="find">아이디/비밀번호 찾기</a>
       </div>
-      <button type="button" class="login_btn" id="btn-login" >카카오 로그인</button>
+      <button type="button" class="login_btn"  ><a href="https://kauth.kakao.com/oauth/authorize?client_id=585ba951eb790dda136089278e378f7e&redirect_uri=http://localhost:8010/auth/kakao/callback&response_type=code">카카오 로그인</a></button>
       <button type="submit" class="login_btn" id="btn-login">로그인</button>
       
     </form>

@@ -11,7 +11,7 @@ import com.cos.pj.model.Users;
 import com.cos.pj.repository.UserRepository;
 
 @Service
-public class UserService {
+public class UserService{
 	
 	@Autowired
 	private UserRepository userRepository;
@@ -20,6 +20,15 @@ public class UserService {
 	
 	@Autowired
 	private BCryptPasswordEncoder encodeer;
+	
+	@Transactional(readOnly=true)
+	public Users 회원찾기(String username) {
+		Users user=userRepository.findByUsername(username).orElseGet(()->{
+			return new Users();
+		});
+		return user;
+	}
+	
 	
 	@Transactional
 	public void 회원가입(Users user) {

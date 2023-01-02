@@ -38,25 +38,29 @@ public class Users {
 	//프로젝트에 연결된 DB의 넘버링 전략을 사용
 	private int id;//시퀀스
 	
-	@Column(nullable=false, length=30,unique = true)
+	
+	//로그인 방식 확인
+	private String oauth;
+	
+	@Column(length=30,unique = true)
 	private String username;//아이디
 
-	@Column(nullable=false, length=100)//해쉬로 변경하여 암호화 length 크게
+	@Column( length=100)//해쉬로 변경하여 암호화 length 크게
 	private String password; 
 	
-	@Column(nullable=false, length=20)
+	@Column(length=20)
 	private String name;
 	
-	@Column(nullable=false, length=20)
+	@Column( length=20)
 	private String birth;
 	
-	@Column(nullable=false, length=20)
+	@Column( length=20)
 	private int tel;
 	
-	@Column(nullable=false, length=50)
+	@Column( length=50)
 	private String email;
 	
-	@Column(nullable=false, length=20)
+	@Column( length=20)
 	private String gender;
 	
 	@Column(nullable=true, length=1)
@@ -65,7 +69,7 @@ public class Users {
 	@Column(nullable=true, length=1)
 	private int emailagree;
 
-	@Column(nullable=false, length=10)
+	@Column( length=10)
 	private String area;
 	
 	//@ColumnDefault("'user'")
