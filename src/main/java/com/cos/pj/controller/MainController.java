@@ -40,7 +40,24 @@ public class MainController {
 	public String faq() {
 		return "faq";
 	}
+	@GetMapping("/auth/aChildHead")
+	//인증이 필요없는 곳에 /auth를 붙인다.
+	public String aChildHead() {
+		return "aChildHead";
+	}
 	
+	@GetMapping("/auth/seniorCitizen")
+	//인증이 필요없는 곳에 /auth를 붙인다.
+	public String seniorCitizen() {
+		return "seniorCitizen";
+	}
+	
+	@GetMapping("/auth/singleParent")
+	//인증이 필요없는 곳에 /auth를 붙인다.
+	public String singleParent() {
+		return "singleParent";
+	}
+
 	//https://dev-setung.tistory.com/20
 	// @RequestParam(value = "searchKeyword", required = false) String searchKeyword
 	

@@ -20,5 +20,7 @@
 	<script  src="/js/search.js"></script>
 	<script  src="/js/user.js"></script>
 	<script  src="/js/cart.js"></script>
+	<script  src="/js/board.js"></script>
+	<script  src="/js/payment.js"></script>
 </body>
 </html>

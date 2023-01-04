@@ -2,6 +2,10 @@ package com.cos.pj.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.domain.Specification;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -9,17 +13,24 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 
+import com.cos.pj.config.auth.PrincipalDetail;
 import com.cos.pj.model.KakaoProfile;
 import com.cos.pj.model.OAuthToken;
+import com.cos.pj.model.RoleType;
 import com.cos.pj.model.Users;
 import com.cos.pj.service.UserService;
+import com.cos.pj.specification.AdminSpecification;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -36,6 +47,8 @@ public class UserController {
 	@Autowired
 	private final AuthenticationManager authenticationManager;
 	
+
+	
 	@Value("${cos.key}")
 	private String cosKey;
 	
@@ -48,6 +61,9 @@ public class UserController {
 		return "user/loginForm";
 	}
 	
+	
+	
+	//카카오톡 로그인
 	@GetMapping("/auth/kakao/callback")
 	public String kakaoCallback(String code) { //Data를 리턴해주는 컨트롤러 함수
 		
@@ -127,6 +143,7 @@ public class UserController {
 		}
 		
 		Users kakaoUser=Users.builder()
+				.name(kakaoProfile.getKakao_account().getProfile().getNickname())
 				.username(kakaoProfile.getKakao_account().getEmail()+"_"+kakaoProfile.getId())
 				.password(cosKey)
 				.email(kakaoProfile.getKakao_account().getEmail())

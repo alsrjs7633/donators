@@ -18,6 +18,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -25,24 +26,27 @@ import lombok.NoArgsConstructor;
 @Entity
 @SequenceGenerator(
 		name = "USER_SEQ_GENERATOR3"
-	    , sequenceName = "USER_SEQ3"
-	    , initialValue = 1
-	    , allocationSize = 1
-	)
-
-//답변 테이블
+		, sequenceName = "USER_SEQ3"
+		, initialValue = 1
+		, allocationSize = 1
+		)
 public class Reply {
-	@Id//기본키
+	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="USER_SEQ_GENERATOR3")
 	private int id;
+	
 	@Column(nullable=false, length=200)
 	private String content;
-	@ManyToOne //여러개의 답변은 하나의 게시글에 존재
+	
+	@ManyToOne
 	@JoinColumn(name="boardsId")
 	private Boards boards;
+	
 	@ManyToOne
 	@JoinColumn(name="userId")
 	private Users users;
-	@CreationTimestamp 
+	
+	@CreationTimestamp
 	private Timestamp createDate;
+
 }
