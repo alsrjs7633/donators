@@ -35,13 +35,9 @@ public class MainController {
 	public String myPage() {
 		return "myPage";
 	}
-	@GetMapping("/board")
-	public String board() {
-		return "board";
-	}
-	@GetMapping("/noticeBoard")
-	public String noticeBoard() {
-		return "noticeBoard";
+	@GetMapping("/myPurchasedList")
+	public String myPurchasedList() {
+		return "myPurchasedList";
 	}
 	@GetMapping("/findLoc")
 	public String findLoc() {
@@ -52,9 +48,23 @@ public class MainController {
 		return "cart";
 	}
 	
-	@GetMapping({"/boardDetail"})
+	@GetMapping("/auth/aChildHead")
 	//인증이 필요없는 곳에 /auth를 붙인다.
-	public String boardDetail() {
-		return "boardDetail";
+	public String aChildHead() {
+		return "aChildHead";
 	}
+	
+	@GetMapping("/auth/seniorCitizen")
+	//인증이 필요없는 곳에 /auth를 붙인다.
+	public String seniorCitizen() {
+		return "seniorCitizen";
+	}
+	
+	@GetMapping("/auth/singleParent")
+	//인증이 필요없는 곳에 /auth를 붙인다.
+	public String singleParent() {
+		return "singleParent";
+	}
+
+	
 }

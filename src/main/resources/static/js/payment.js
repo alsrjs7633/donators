@@ -1,41 +1,67 @@
-let index = {
+let payment = {
 	init: function() {
-		$(".submit_button").on("click",() => {
-			//화살표 함수를 사용하는 이유는 this를 바인딩하기 위해 사용하기 위함이다.
-			this.save();
+		$("#payment_button").on("click",()=>{
+			this.payment();
 		});
 	},
-	
-	save:function() {
+
+	payment: function() {
 		let data = {
-			username: $("#username").val(),
-			password: $("#password").val(),
-			email: $("#email").val()
+			id: $("#userId").val(),
+			
 		};
-		
-	  /*ajax 호출시 default가 비동기 호출이다
-		ajax통신을 이용해서 3개의 데이터를 json으로 변경하여 insert요청을 한다.
-		ajax가 통신을 성공하고 서버가 json을 리턴해주면 자동으로 자바 오브젝트로 변환해준다.
-		*/
-		
-		$.ajax({
-			//회원가입 수행 요청
-			type: "POST",
-			url: "/payment",
-			data: JSON.stringify(data), //http body 데이터
-			contentType: "application/json; charset=utf-8",  //body데이더카 어떤타입인지를 나타내준다.
-			dataType: "json"  //요청을 서버로해서 응답이 왔을 때,기본적으로 모든 것이 문자열 (생긴게 json이라면 javascript오브젝트로 변경해준다.)
-			//응답의 결과가 문자열이 아닌 json으로 변환된다.
-		}).done(function(data, status){
-			alert("후원이 완료되었습니다.");
+
+		var IMP = window.IMP;
+		IMP.init('imp31226588');
+		var msg;
+
+		IMP.request_pay({
+			pg: 'kakaopay',
+			pay_method : 'card',
+			merchant_uid : '기부자들' + new Date().getTime(),
+			name : "기부자들",
+			amount : 1,
+		}, function(resp) {
+
+			if (resp.success) {
+				$.ajax({
+					url: "/",
+					type: 'POST',
+					dataType: 'json',
+					data: {
+						imp_uid: resp.imp_uid
+					}
+				}).done(function (data) {
+					if (all_fine) {
+						msg = '결제가 완료되었습니다';
+						msg += '\n고유ID : ' + resp.imp_uid;
+						msg += '\n상점 거래ID : ' + resp.merchant_uid;
+						msg += '\n결제 금액 : ' + resp.paid_amount;
+						msg += '\n카트 승인번호 : ' + resp.apply_num;
+
+						alert(msg);
+
+					} else {
+						alert("결제실패");
+					}
+				});
 			location.href = "/";
-			// 회원가입 오류 잡기 (아이디 중복일 경우) - GlobalExceptionHandler
-			//응답이 정상
-		}).fail(function(error){
-			alert(JSON.stringify(error));
-			//응답이 비정상
+			} else {
+				msg = '결제에 실패하였습니다'
+				msg += '에러내용 : ' + resp.error_msg;
+				location.href = "/payment";
+				alert(msg);
+			}
+			alert("결제가 완료되었습니다.")
+			$.ajax({
+				type: "POST",
+				url: "/" + data.id,
+				data: JSON.stringify(data),
+				contentType: "application/json; charset=utf-8",
+				dataType: "json"
+			})
 		});
-		//ajax 통신을 이용해서 3개의 데이터를 jsons
-	},
 	}
-index.init(); 
+
+}
+payment.init();

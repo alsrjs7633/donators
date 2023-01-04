@@ -14,7 +14,13 @@
       <li>경기도 수원시 팔달구 매산로 12-1, 2~4층</li>
     </ul>
   </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script><!-- jquery 최신버전 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/ecb3ecb40d.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.8.js"></script>
+  	<script src="/js/board.js"></script>
+	<script src="/js/payment.js"></script>
 	<script  src="/js/header.js"></script>
 	<script  src="/js/FAQ.js"></script>
 	<script  src="/js/search.js"></script>

@@ -39,7 +39,7 @@ public class Users {
 	private int id;//시퀀스
 	
 	@Column(nullable=false, length=30,unique = true)
-	private String username;//아이디
+	private String username; //아이디
 
 	@Column(nullable=false, length=100)//해쉬로 변경하여 암호화 length 크게
 	private String password; 

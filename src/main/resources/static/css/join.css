@@ -21,10 +21,15 @@
     width:100%;
   }
   .form_proof{
-    display:block;
+    display:flex;
+    flex-direction:column;
+  }
+  .form_proof input{
+  	margin-left:12px;
   }
   .proof_file{
     margin-top: 8px;
+    
   }
   .idForm{
     display:flex;

@@ -1,33 +1,3 @@
-*{
-  padding: 0;
-  margin: 0;
-}
-
-h1{
-  font-size: 50px;
-}
-
-.banner{
-  background-color:rgb(28, 171, 226);
-  height: 200px;
-  /* width: 100%; */
-}
-.banner_title{
-  padding-top: 50px;
-  padding-left: 10%;
-  margin-bottom: 1px;
-  color: #fff;
-  height: 73.56px;
-}
-
-.banner_title_explain{
-  margin-top: 1px;
-  margin-left: 10%;
-  font-size: 20px;
-  color: #fff;
-  height: 32px;
-  padding-bottom: 20px;
-}
 
 /*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
 
@@ -50,17 +20,23 @@ button{
   padding-right: 5%;
   padding-bottom: 12px;
   padding-top: 25px;
+  margin-bottom: 20px;
 }
 
-.prev_button{
+.modify_button{
   height: 35px;
   width: 20%;
   float: left;
+  border: none;
+  border-radius: 5%;
+  text-align: center;
+  background-color:  rgb(132, 134, 136);
+  padding-top: 7px;
   margin-right: 2%;
-  
+  font-size: 13.5px;
 }
 
-.next_button{
+.delete_button{
   height: 35px;
   width: 20%;
   float: left;
@@ -184,9 +160,9 @@ hr{
 
 .first_reply{
   padding-left: 3%;
-  padding-top: 15px;
-  padding-bottom: 20px;
-  margin-top: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* margin-top: 5px; */
   
 }
 
@@ -213,14 +189,37 @@ hr{
   margin-left: 14.5%;
 }
 
+#btn-reply-update{
+	background-color: white;
+	margin-left: 3%;
+	margin-right: 1%;
+	color: gray;
+}
+
+#btn-reply-delete{
+	background-color: white;
+	margin-left: 1%;
+	color: gray;
+}
+
 /*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+
+/* .reply_3dot_button_box{
+ height:40px;
+ width:100%;
+ display: flex;
+ justify-content: end;
+ 
+} 
 
 .reply_3dot_button{
   margin-bottom: 10px;
   margin-bottom: 80px;
   margin-top: 20px;
   margin-left: 35%;
-}
+  width: 40px;
+  height: 40px;
+} */
 
 /*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
 

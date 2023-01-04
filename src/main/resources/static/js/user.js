@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
       $('.jcheckAll').click(function () {
         $('.jcheckOne').prop('checked',this.checked);

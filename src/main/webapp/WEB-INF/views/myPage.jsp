@@ -1,138 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="layout/header.jsp"%>
-
-<div id="nav-wrap">
-      <nav class="navi">
-        <div class="navContainer">
-          <a class="logo-area" href="#page-top"><h1>기부자들</h1></a>
-          <button class="openMenu dnone" type="button">Menu</button>
-          <div class="nav-menu">
-            <ul class="nav-ul">
-              <li id="supBtn" class="nav-item">
-                <a class="nav-link" href="#" onclick="openSup()">
-                  <span class="frame-btn__text">후원</span>
-                </a>
-              </li>
-              <li id="fundBtn" class="nav-item">
-                <a class="nav-link" href="#">
-                  <span class="frame-btn__text">펀딩</span>
-                </a>
-              </li>
-              <li id="boardBtn" class="nav-item">
-                <a class="nav-link" href="#" onclick="openBoard()">
-                  <span class="frame-btn__text">게시판</span>
-                </a>
-              </li>
-              <li id="infoBtn" class="nav-item">
-                <a class="nav-link frame-btn" href="#" onclick="openInfo()">
-                  <span class="frame-btn__text">소개</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <button class="fast-sup">
-              <span class="">
-                <span class="sup-color">빠른 후원</span>
-              </span>
-            </button>
-          <div class="user-icon">
-            <ul class="user-ul">
-              <!--로그인-->
-              <li>
-                <a href="#"><i class="fa-solid fa-right-to-bracket"></i></a>
-              </li>
-              <!--마이페이지-->
-              <li class="dnone">
-                <a href="#"><i class="fa-solid fa-user"></i></a>
-              </li>
-            </ul>
-          </div>
-          <div class="mobile-open">
-            <i class="fa-solid fa-caret-down"></i>
-          </div>
-          <script>
-            $(document).ready(function(){
-              
-              $(".mobile-open").click(function(){
-                  if($("#mobile-menu").hasClass("dnone")){
-                    $("#mobile-menu").removeClass("dnone");
-                  }else{
-                    $("#mobile-menu").addClass("dnone");
-                  }
-                
-              });
-              $("#nav-ul > li").mouseenter(function(){
-                for(let i=0;i<$("nav-ul > li").length;i++){
-                  $(".dnone-menu")
-                }
-              })
-            });
-          </script>
-        </div>
-      </nav>
-      <div class="hov-menu">
-        <div id="sup-menu" class="dnone-menu dnone">
-          <ul>
-            <li>
-              <a href="#">소년/소녀가장</a>
-            </li>
-            <li>
-              <a href="#">한부모 가정</a>
-            </li>
-            <li>
-              <a href="#">독거노인 가정</a>
-            </li>
-            <li>
-              <a href="">1:n 같이 양육</a>
-            </li>
-          </ul>
-        </div>
-        <div id="board-menu" class="dnone-menu dnone">
-          <ul>
-            <li>
-              <a href="#">공지사항</a>
-            </li>
-            <li>
-              <a href="#">게시글 보기</a>
-            </li>
-            <li>
-              <a href="#">후기</a>
-            </li>
-          </ul>
-        </div>
-        <div id="info-menu" class="dnone-menu dnone">
-          <ul>
-            <li>
-              <a href="#">소개글</a>
-            </li>
-            <li>
-              <a href="#">찾아오시는 길</a>
-            </li>
-            <li>
-              <a href="#">FAQ</a>
-            </li>
-          </ul>
-        </div>
-        <div id="mobile-menu" class="dnone-menu dnone">
-          <ul>
-            <li>
-              <a href="">후원</a>
-            </li>
-            <li>
-              <a href="">펀딩</a>
-            </li>
-            <li>
-              <a href="">게시판</a>
-            </li>
-            <li>
-              <a href="">소개</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <script src="js/header.js"></script>
 <div id="wrap">
   <div id="top-banner">
     <svg id="fullwave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -152,7 +20,7 @@
   <div id="mainBoard">
     <div id="buttons">
       <div id="receipt">
-        <a href="">기부금 영수증</a>
+        <a href="/myPurchasedList">기부금 영수증</a>
       </div>
     </div>
     

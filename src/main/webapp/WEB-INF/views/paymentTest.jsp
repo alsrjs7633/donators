@@ -24,8 +24,20 @@
 </div>
   
   <div class="donation_box">
-<!-- 
-    <div class="money_box">
+  
+  
+  <form id="form-payment">
+  	<input name="pay-name"/>"${users.name}"
+  	<input name="pay-tel"/>"${users.tel}"
+  	<input name="pay-email"/>"${users.email}"
+  	<input name="total-price"/>
+  	<input name="total-pay-price"/>
+  	
+  	    <button class="submit_button" id="payment_button">후원하기</button>
+  	
+  </form>
+
+<!--     <div class="money_box">
       <div class="money_explain">
         <h3>잔액</h3>
       </div>
@@ -68,11 +80,11 @@
       <br>
 
       <div class="select">
-        <input type="radio" class="radio" id="select1" name="chk_money"><label for="select1">{PRODUCT.bgd1.pPrice}</label>
-        <input type="radio" class="radio" id="select2" name="chk_money"><label for="select2">{PRODUCT.bgd2.pPrice}</label>
-        <input type="radio" class="radio" id="select3" name="chk_money"><label for="select3">{PRODUCT.bgd3.pPrice}</label> 
-        <input type="radio" class="radio" id="select4" name="chk_money"><label for="select4">{PRODUCT.bgd4.pPrice}</label>
-        <input type="radio" class="radio" id="select5" name="chk_money"><label for="select5">{PRODUCT.bgd5.pPrice}</label>          
+        <input type="radio" class="radio" id="select1" name="chk_money"><label for="select1">10,000</label>
+        <input type="radio" class="radio" id="select2" name="chk_money"><label for="select2">20,000</label>
+        <input type="radio" class="radio" id="select3" name="chk_money"><label for="select3">30,000</label> 
+        <input type="radio" class="radio" id="select4" name="chk_money"><label for="select4">40,000</label>
+        <input type="radio" class="radio" id="select5" name="chk_money"><label for="select5">50,000</label>          
         <input type="text" class="input_text" placeholder="금액을 입력하세요" id="select6" name="chk_money"><label for="select6"></label> 
       </div>
 
@@ -84,4 +96,5 @@
 
   </div>  
 </body>
+<script src="/js/payment.js"></script>
 <%@ include file="layout/footer.jsp"%>

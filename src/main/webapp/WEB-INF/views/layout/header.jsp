@@ -1,13 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<!DOCTYPE html>
-<html lang="en">
+<!-- <!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Document</title> -->
   <link rel="stylesheet" href="/css/myPage.css">
   <link rel="stylesheet" href="/css/header.css">
   <link rel="stylesheet" href="/css/footer.css">
@@ -17,14 +16,14 @@
   <link rel="stylesheet" href="/css/join.css">
   <link rel="stylesheet" href="/css/login.css">
   <link rel="stylesheet" href="/css/board.css">
-  <link rel="stylesheet" href="/css/noticeBoard.css">
+  <link rel="stylesheet" href="/css/boardDetail.css">
+  <link rel="stylesheet" href="/css/boardList.css">
   <link rel="stylesheet" href="/css/findLoc.css">
   <link rel="stylesheet" href="/css/cart.css">
-
+  <link rel="stylesheet" href="/css/funding.css">
+  <link rel="stylesheet" href="/css/payment.css">	
+  
   <link rel="stylesheet" href="/css/myPage.css">
-  <script  src="http://code.jquery.com/jquery-latest.min.js"></script><!-- jquery 최신버전 -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://kit.fontawesome.com/ecb3ecb40d.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;900&display=swap" rel="stylesheet"></head>
@@ -89,7 +88,7 @@
                   <a href="#"><i class="fa-solid fa-user"></i></a>
                 </li>
                 <li>
-                  <a href="#">영수증</a>
+                  <a href="/myPage">마이페이지</a>
                 </li>
               </ul>
           </div>
@@ -99,13 +98,13 @@
       <div id="sup-menu" class="dnone-menu dnone">
         <ul>
           <li>
-            <a href="#">소년/소녀가장</a>
+            <a href="/auth/aChildHead">소년/소녀가장</a>
           </li>
           <li>
-            <a href="#">한부모 가정</a>
+            <a href="/auth/singleParent">한부모 가정</a>
           </li>
           <li>
-            <a href="#">독거노인 가정</a>
+            <a href="/auth/seniorCitizen">독거노인 가정</a>
           </li>
         </ul>
       </div>
@@ -125,10 +124,10 @@
       <div id="board-menu" class="dnone-menu dnone">
         <ul>
           <li>
-            <a href="#">공지사항</a>
+            <a href="/auth/noticeBoard">공지사항</a>
           </li>
           <li>
-            <a href="#">게시글 보기</a>
+            <a href="/board/boardList">게시글 보기</a>
           </li>
           <li>
             <a href="#">후기</a>
@@ -141,7 +140,7 @@
             <a href="#">소개글</a>
           </li>
           <li>
-            <a href="#">찾아오시는 길</a>
+            <a href="/findLoc">찾아오시는 길</a>
           </li>
           <li>
             <a href="/auth/faq">FAQ</a>

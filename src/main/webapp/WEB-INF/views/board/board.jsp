@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="layout/header.jsp"%>
+<%@ include file="../layout/header.jsp"%>
 <div id="wrap">
   <div id="top-banner">
     <svg id="fullwave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -30,8 +30,8 @@
         <textarea class="form-content" rows="5" id="content"></textarea>
       </div>
     </form>
-    <button id="btn-save" class="board-save">저장</button>
+    <button id="btn-save" class="btn btn-primary" onclick="location.href='/board/boardList' ">저장</button>
   </div>
+<!--  onclick="location.href='/board/boardIndex' " -->
 
-
-<%@ include file="layout/footer.jsp"%>
+<%@ include file="../layout/footer.jsp"%>
