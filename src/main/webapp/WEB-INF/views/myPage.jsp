@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="layout/header.jsp"%>
+
 <div id="nav-wrap">
       <nav class="navi">
         <div class="navContainer">
@@ -132,6 +133,7 @@
       </div>
     </div>
     <script src="js/header.js"></script>
+
 <div id="wrap">
   <div id="top-banner">
     <svg id="fullwave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -151,7 +153,7 @@
   <div id="mainBoard">
     <div id="buttons">
       <div id="receipt">
-        <a href="">기부금 영수증</a>
+        <a href="/myPurchasedList">기부금 영수증</a>
       </div>
     </div>
     

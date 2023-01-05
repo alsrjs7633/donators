@@ -18,8 +18,10 @@
     </div>
   </div>
 </div>
+
 <!-- upload css -->
 <div class="container">
+
 <form id="fileForm"  enctype="multipart/form-data">
 	<div class="form_proof">
         <label class="form_name">취약 계층 등록(선택)<br></label>
@@ -39,5 +41,7 @@
            <img id="img" />
        </div>
 </div>
+
 </div>
+
 <%@ include file="layout/footer.jsp"%>

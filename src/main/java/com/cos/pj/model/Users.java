@@ -38,12 +38,15 @@ public class Users {
 	//프로젝트에 연결된 DB의 넘버링 전략을 사용
 	private int id;//시퀀스
 	
+
 	
 	//로그인 방식 확인
 	private String oauth;
 	
 	@Column(length=30,unique = true)
 	private String username;//아이디
+
+
 
 	@Column( length=100)//해쉬로 변경하여 암호화 length 크게
 	private String password; 

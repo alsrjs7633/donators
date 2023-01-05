@@ -68,6 +68,7 @@
 			</c:otherwise>
 		</c:choose>
 	</ul>
+
 	<!-- 페이지 목록 갯수   -->
   
       
@@ -197,3 +198,7 @@
 	}
 </script>
     
+
+  
+<%@ include file="../layout/footer.jsp"%>  
+

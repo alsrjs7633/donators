@@ -37,7 +37,7 @@
     height:400px;
     border:1px solid rgba(0,0,0,0.2);
   }
-  .board-save{
+  #btn-save{
     width: 250px;
     height: 50px;
     background-color: rgb(28, 171, 226);

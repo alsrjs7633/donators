@@ -19,6 +19,7 @@
   </div>
 </div>
 
+
  <div class="search_container">
  
  
@@ -40,10 +41,12 @@
               <li class="gender_form"><input type="radio" id="gen1" name="genSelect" value="O" checked>
                 <label for="gen1" class="fil_label">전체</label>
               </li>
+
               <li class="gender_form"><input type="radio" id="gen2" name="genSelect" value="M">
                 <label for="gen2" class="fil_label">남자</label>
               </li>
               <li class="gender_form"><input type="radio" id="gen3" name="genSelect" value="W">
+
                 <label for="gen3" class="fil_label">여자</label>
               </li>
             </ul>
@@ -92,7 +95,7 @@
         
     </div>
  
- 
+
     <div class="search_ul">
     <c:forEach  var="uploadFile" items="${uploadFiles.content}"><!-- .content=정해진 기능 -->
       <div class="search_li">
@@ -146,7 +149,9 @@
             class="bi bi-chevron-left" viewBox="0 0 16 16">
             <path fill-rule="evenodd"
               d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+
           </svg></a></li>
+
         </c:when>
         <c:otherwise>
          <li><a href="?page=${uploadFiles.first}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -160,7 +165,9 @@
             class="bi bi-chevron-left" viewBox="0 0 16 16">
             <path fill-rule="evenodd"
               d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+
           </svg></a></li>
+
         </c:otherwise>
         </c:choose>
         <c:choose>

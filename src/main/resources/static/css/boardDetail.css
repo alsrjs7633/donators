@@ -1,5 +1,4 @@
 
-/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
 
 .boardDeatil_box{
   border: 1px solid;
@@ -23,6 +22,21 @@ button{
   margin-bottom: 20px;
 }
 
+#btn-reply-update{
+	background-color: white;
+	margin-left: 3%;
+	margin-right: 1%;
+	color: gray;
+}
+
+#btn-reply-delete{
+	background-color: white;
+	margin-left: 1%;
+	color: gray;
+}
+
+
+
 .prev_button{
   height: 35px;
   width: 20%;
@@ -31,7 +45,22 @@ button{
   
 }
 
-.next_button{
+
+.modify_button{
+  height: 35px;
+  width: 20%;
+  float: left;
+  border: none;
+  border-radius: 5%;
+  text-align: center;
+  background-color:  rgb(132, 134, 136);
+  padding-top: 7px;
+  margin-right: 2%;
+  font-size: 13.5px;
+}
+
+.delete_button{
+
   height: 35px;
   width: 20%;
   float: left;
@@ -158,6 +187,7 @@ hr{
   padding-top: 15px;
   padding-bottom: 20px;
   margin-top: 5px;
+
   
 }
 
@@ -184,14 +214,7 @@ hr{
   margin-left: 14.5%;
 }
 
-/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
 
-.reply_3dot_button{
-  margin-bottom: 10px;
-  margin-bottom: 80px;
-  margin-top: 20px;
-  margin-left: 35%;
-}
 
 /*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
 

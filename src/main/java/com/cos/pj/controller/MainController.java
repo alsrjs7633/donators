@@ -17,6 +17,7 @@ import com.cos.pj.specification.SearchSpecification;
 
 @Controller
 public class MainController {
+
 	
 	@Autowired
 	private UploadRepository uploadRepository;
@@ -24,15 +25,23 @@ public class MainController {
 	@Autowired
 	private UploadService uploadService;
 	
+
+
+
 	@GetMapping({"","/"})
+	//인증이 필요없는 곳에 /auth를 붙인다.
 	public String index() {
 		return "index";
 	}
-	@GetMapping("/funding")
+	
+	@GetMapping({"/funding"})
+	//인증이 필요없는 곳에 /auth를 붙인다.
 	public String funding() {
 		return "funding";
 	}
-	@GetMapping("/payment")
+	
+	@GetMapping({"/payment"})
+	//인증이 필요없는 곳에 /auth를 붙인다.
 	public String payment() {
 		return "payment";
 	}
@@ -40,23 +49,9 @@ public class MainController {
 	public String faq() {
 		return "faq";
 	}
-	@GetMapping("/auth/aChildHead")
-	//인증이 필요없는 곳에 /auth를 붙인다.
-	public String aChildHead() {
-		return "aChildHead";
-	}
 	
-	@GetMapping("/auth/seniorCitizen")
-	//인증이 필요없는 곳에 /auth를 붙인다.
-	public String seniorCitizen() {
-		return "seniorCitizen";
-	}
 	
-	@GetMapping("/auth/singleParent")
-	//인증이 필요없는 곳에 /auth를 붙인다.
-	public String singleParent() {
-		return "singleParent";
-	}
+	
 
 	//https://dev-setung.tistory.com/20
 	// @RequestParam(value = "searchKeyword", required = false) String searchKeyword
@@ -91,9 +86,13 @@ public class MainController {
 	public String myPage() {
 		return "myPage";
 	}
+
+	@GetMapping("/myPurchasedList")
+	public String myPurchasedList() {
+		return "myPurchasedList";
+	}
 	
-	
-	@GetMapping("/auth/findLoc")
+	@GetMapping("/findLoc")
 	public String findLoc() {
 		return "findLoc";
 	}
@@ -107,5 +106,23 @@ public class MainController {
 	}
 	
 	
+	@GetMapping("/auth/aChildHead")
+	//인증이 필요없는 곳에 /auth를 붙인다.
+	public String aChildHead() {
+		return "aChildHead";
+	}
+	
+	@GetMapping("/auth/seniorCitizen")
+	//인증이 필요없는 곳에 /auth를 붙인다.
+	public String seniorCitizen() {
+		return "seniorCitizen";
+	}
+	
+	@GetMapping("/auth/singleParent")
+	//인증이 필요없는 곳에 /auth를 붙인다.
+	public String singleParent() {
+		return "singleParent";
+	}
+
 	
 }
