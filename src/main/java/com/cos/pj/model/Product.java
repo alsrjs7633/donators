@@ -3,11 +3,13 @@ package com.cos.pj.model;
 import java.sql.Timestamp;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -16,6 +18,7 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Table(name="product")
@@ -23,6 +26,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @Entity
+@NoArgsConstructor
 @SequenceGenerator(
 		name="PRODUCT_SEQ_GENERATOR"
 		, sequenceName="PRODUCT_SEQ"
@@ -36,14 +40,15 @@ public class Product {
 	//프로젝트에 연결된 DB의 넘버링 전략을 사용
 	private int id;//시퀀스
 	
-	@Column(nullable=false)
+	private String payChoice;   //후원방법
+	
 	private String pName; //상품이름
 	
-	@Column(nullable=false)
-	private int pPrice;
+	private String pPrice;   //후원금액
 
 	@ManyToOne(fetch=FetchType.EAGER)
-	private Users users;
+	@JoinColumn(name="userid")
+	private Users users;  
 	
 	@CreationTimestamp
 	private Timestamp createDate;

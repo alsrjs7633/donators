@@ -21,6 +21,7 @@
     <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.8.js"></script>
   	<script src="/js/board.js"></script>
 	<script src="/js/payment.js"></script>
+<!-- 	<script  src="/js/product.js"></script> -->
 	<script  src="/js/header.js"></script>
 	<script  src="/js/FAQ.js"></script>
 	<script  src="/js/search.js"></script>

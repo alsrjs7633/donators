@@ -6,7 +6,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.cos.pj.dto.ResponseDto;
 import com.cos.pj.model.Boards;
 import com.cos.pj.model.Reply;
 import com.cos.pj.model.Users;

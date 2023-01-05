@@ -6,11 +6,16 @@ let payment = {
 	},
 
 	payment: function() {
+		
 		let data = {
-			id: $("#userId").val(),
-			
+			payChoice: $("input[name='chk_use']:checked").val(),
+			pName:$("#pName").val(),
+			pPrice:$("input[name='chk_money']:checked").val()
 		};
-
+		
+        console.log(data.payChoice)
+        console.log(data.pName)
+		console.log(data.pPrice)
 		var IMP = window.IMP;
 		IMP.init('imp31226588');
 		var msg;
@@ -20,46 +25,20 @@ let payment = {
 			pay_method : 'card',
 			merchant_uid : '기부자들' + new Date().getTime(),
 			name : "기부자들",
-			amount : 1,
+			amount :data.pPrice,
 		}, function(resp) {
-
-			if (resp.success) {
-				$.ajax({
-					url: "/",
-					type: 'POST',
-					dataType: 'json',
-					data: {
-						imp_uid: resp.imp_uid
-					}
-				}).done(function (data) {
-					if (all_fine) {
-						msg = '결제가 완료되었습니다';
-						msg += '\n고유ID : ' + resp.imp_uid;
-						msg += '\n상점 거래ID : ' + resp.merchant_uid;
-						msg += '\n결제 금액 : ' + resp.paid_amount;
-						msg += '\n카트 승인번호 : ' + resp.apply_num;
-
-						alert(msg);
-
-					} else {
-						alert("결제실패");
-					}
-				});
-			location.href = "/";
-			} else {
-				msg = '결제에 실패하였습니다'
-				msg += '에러내용 : ' + resp.error_msg;
-				location.href = "/payment";
-				alert(msg);
-			}
-			alert("결제가 완료되었습니다.")
 			$.ajax({
 				type: "POST",
-				url: "/" + data.id,
-				data: JSON.stringify(data),
-				contentType: "application/json; charset=utf-8",
+				url: "/payment",
+				data:JSON.stringify(data),
+				contentType:"application/json; charset=utf-8",
 				dataType: "json"
-			})
+			}).done(function(resp){
+			alert("결제가 완료되었습니다.");
+			location.href="/";
+		}).fail(function(error){
+			alert(JSON.stringify(error));
+		});
 		});
 	}
 

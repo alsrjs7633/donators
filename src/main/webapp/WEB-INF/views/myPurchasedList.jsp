@@ -20,9 +20,9 @@
           <tr><th>번호</th><th>제목</th><th>작성자</th><th>작성일</th></tr>
         </thead>
         <tbody>
-        <c:forEach var="payment" items="${product.pName}">
+        <c:forEach var="product" items="${product}">
           <tr class="b_tr">
-            <td class="tTitle"><a href="${product.pPrice}" class="btn btn-primary">${product.pName}</a></td>
+            <td class="tTitle"><a class="btn btn-primary"> ${product.pName}</a></td>
           </tr>
           </c:forEach>
         </tbody>

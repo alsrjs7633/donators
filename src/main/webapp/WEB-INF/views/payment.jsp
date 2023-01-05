@@ -42,24 +42,24 @@
 
       <h3>후원방법</h3>
       <br>
-      <div class="choice">
-        <input type="radio" class="radio" id="lion1" name="chk_use"><label for="lion1">정기</label>
-        <input type="radio" class="radio" id="lion2" name="chk_use"><label for="lion2">일시</label>
-      </div>    
+      <form class="choice">
+        <input type="radio" class="radio" id="lion1" name="chk_use" value="정기"><label for="lion1">정기</label>
+        <input type="radio" class="radio" id="lion2" name="chk_use" value="일시"><label for="lion2">일시</label>
+      </form>    
     </div>
     <hr>
 
-    <div class="second">
+    <form class="second">
       <h3>후원분야</h3>
       <br>
-    <select class="category" name="category">
-      <option value="">후원분야 선택</option>
-      <option value="">소년,소녀가장</option>
-      <option value="">병원비 지원하기</option>
-      <option value="">보육원 아이들 돕기</option>
+    <select class="category" name="category" id="pName">
+      <option value="미정">후원분야 선택</option>
+      <option value="소년,소녀가장">소년,소녀가장</option>
+      <option value="병원비 지원하기">병원비 지원하기</option>
+      <option value="보육원 아이들 돕기">보육원 아이들 돕기</option>
     </select>
     
-    </div>
+    </form>
 
     <hr>
 
@@ -67,14 +67,14 @@
       <h3>후원금액(원)</h3>
       <br>
 
-      <div class="select">
-        <input type="radio" class="radio" id="select1" name="chk_money"><label for="select1">{PRODUCT.bgd1.pPrice}</label>
-        <input type="radio" class="radio" id="select2" name="chk_money"><label for="select2">{PRODUCT.bgd2.pPrice}</label>
-        <input type="radio" class="radio" id="select3" name="chk_money"><label for="select3">{PRODUCT.bgd3.pPrice}</label> 
-        <input type="radio" class="radio" id="select4" name="chk_money"><label for="select4">{PRODUCT.bgd4.pPrice}</label>
-        <input type="radio" class="radio" id="select5" name="chk_money"><label for="select5">{PRODUCT.bgd5.pPrice}</label>          
+      <form class="select" id="pPrice">
+        <input type="radio" class="radio" id="select1" name="chk_money" value="10000"><label for="select1">10000</label>
+        <input type="radio" class="radio" id="select2" name="chk_money" value="20000"><label for="select2">20000</label>
+        <input type="radio" class="radio" id="select3" name="chk_money" value="30000"><label for="select3">30000</label> 
+        <input type="radio" class="radio" id="select4" name="chk_money" value="40000"><label for="select4">40000</label>
+        <input type="radio" class="radio" id="select5" name="chk_money" value="50000"><label for="select5">50000</label>          
         <input type="text" class="input_text" placeholder="금액을 입력하세요" id="select6" name="chk_money"><label for="select6"></label> 
-      </div>
+      </form>
 
       </div>
 

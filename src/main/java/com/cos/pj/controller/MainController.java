@@ -1,10 +1,21 @@
 package com.cos.pj.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import com.cos.pj.model.Product;
+import com.cos.pj.repository.ProductRepository;
 
 @Controller
 public class MainController {
+	
+	@Autowired
+	private ProductRepository productRepository;
+	
 
 	@GetMapping({"","/"})
 	//인증이 필요없는 곳에 /auth를 붙인다.
@@ -36,7 +47,11 @@ public class MainController {
 		return "myPage";
 	}
 	@GetMapping("/myPurchasedList")
-	public String myPurchasedList() {
+	public String myPurchasedList(Model model) {
+		List<Product> product = productRepository.findAll();
+		
+		model.addAttribute("product", product);
+		
 		return "myPurchasedList";
 	}
 	@GetMapping("/findLoc")

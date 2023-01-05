@@ -59,7 +59,7 @@ public class BoardController {
 	//글 수정하기
 	@GetMapping("/board/{id}/updateForm")
 	public String updateForm(@PathVariable int id,Model model) {
-	model.addAttribute("board", boardService.글상세보기(id));
+	model.addAttribute("board", boardService.글수정하기(id));
 	return "board/updateForm";
 	/* 기존에 있던 값을 뿌려주고 그것을 업데이트하는 것이다. */
 											
