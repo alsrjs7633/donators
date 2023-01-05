@@ -22,8 +22,12 @@
 
       <div class="boardContainer">
       <h2 class="noTitle">게시판</h2>
-      <div class="top_button_box">
-      <button type="submit" value="prev" class="viewPost" onclick="location.href='/board/board' "><b>글쓰기</b></button>
+      <div class="board_form">
+      <button type="submit" value="prev" class="viewPost board_btn" onclick="location.href='/board/board'">글쓰기</button>
+      <form action="/board/boardList" method="GET" >
+      <input type="text" class="search_board" id="search_board" name="searchTitle" style="height:100%">
+      <button type="submit" class="board_btn">검색하기</button>
+      </form>
     </div>
       <table class="boardt">
         <colgroup>
@@ -38,7 +42,10 @@
         <tbody>
         <c:forEach var="board" items="${boards.content}">
           <tr class="b_tr">
-            <td class="tTitle"><a href="/board/${board.id}" class="btn btn-primary">${board.title}</a></td>
+            <td class="tTitle" style="text-align:center"><a href="/board/${board.id}" class="btn btn-primary">${board.id}</a></td>
+            <td class="tTitle" ><a href="/board/${board.id}" class="btn btn-primary">${board.title}</a></td>
+            <td class="tTitle" style="text-align:center"><a href="/board/${board.id}" class="btn btn-primary">${board.users.name}</a></td>
+            <td class="tTitle" style="text-align:center"><a href="/board/${board.id}" class="btn btn-primary">${board.createDate}</a></td>
           </tr>
           </c:forEach>
         </tbody>

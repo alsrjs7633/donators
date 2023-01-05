@@ -7,7 +7,7 @@
     <input type="radio" name="radio-btn" id="img-1" checked />
     <li class="slide-container">
     <div class="slide">
-      <img src="/images/20200106_091012-1024x768.jpg" style="width:100%" height="700px">
+      <img src="/images/girl-gb15d6fa93_1920.jpg" style="width:100%" height="700px">
         </div>
     <div class="nav">
       <label for="img-6" class="prev">&#x2039;</label>
@@ -18,7 +18,7 @@
     <input type="radio" name="radio-btn" id="img-2" />
     <li class="slide-container">
         <div class="slide">
-          <img src="/images/aloneBoy.jpg" style="width:100%" height="700px">
+          <img src="/images/monk-gba87c6728_1920.jpg" style="width:100%" height="700px">
         </div>
     <div class="nav">
       <label for="img-1" class="prev">&#x2039;</label>
@@ -29,7 +29,7 @@
     <input type="radio" name="radio-btn" id="img-3" />
     <li class="slide-container">
         <div class="slide">
-          <img src="/images/brother&sister.png" style="width:100%" height="700px">
+          <img src="/images/man-g22fd4ee92_1920.jpg" style="width:100%" height="700px">
         </div>
     <div class="nav">
       <label for="img-2" class="prev">&#x2039;</label>

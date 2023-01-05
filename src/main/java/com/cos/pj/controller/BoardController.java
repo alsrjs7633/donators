@@ -3,20 +3,26 @@ package com.cos.pj.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.cos.pj.model.Boards;
+import com.cos.pj.repository.BoardRepository;
 import com.cos.pj.service.BoardService;
+import com.cos.pj.specification.BoardSearchSpecification;
 
 @Controller
 public class BoardController {
 
 	@Autowired
 	private BoardService boardService;
-
+	@Autowired
+	private BoardRepository boardRepository;
 	
 	/*
 	 * @GetMapping("/board/boardIndex") public String boardIndex() { return
@@ -25,9 +31,13 @@ public class BoardController {
 	
 	@GetMapping("/board/boardList")
 	public String index(Model model,@PageableDefault(size = 6, sort = "id",
-	direction =  Sort.Direction.DESC) Pageable pageable) {
+	direction =  Sort.Direction.DESC) Pageable pageable,@RequestParam(value="searchTitle", required = false) String searchTitle) {
 		System.out.println( boardService.글목록(pageable));
-		model.addAttribute("boards", boardService.글목록(pageable));
+		
+		Specification<Boards> spec = (root, query, criteriaBuilder) -> null;
+		if(searchTitle!=null) {
+		spec = spec.and(BoardSearchSpecification.searchTitle(searchTitle));}
+		model.addAttribute("boards", boardRepository.findAll(spec, pageable));
 		return "board/boardList";
 	}
 	/*

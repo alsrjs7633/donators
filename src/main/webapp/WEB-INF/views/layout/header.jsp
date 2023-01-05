@@ -23,6 +23,7 @@
 <<<<<<< HEAD
   <link rel="stylesheet" href="/css/boardDetail.css">
   <link rel="stylesheet" href="/css/boardList.css">
+  <link rel="stylesheet" href="/css/noticeBoard.css">
 
   <script  src="http://code.jquery.com/jquery-latest.min.js"></script><!-- jquery 최신버전 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
