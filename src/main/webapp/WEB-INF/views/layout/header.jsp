@@ -123,7 +123,7 @@
             <a href="/search">1:3 같이 양육</a>
           </li>
           <li>
-            <a href="#">1:5 같이 양육</a>
+            <a href="/search">1:5 같이 양육</a>
           </li>
           <li>
             <a href="#"></a>
@@ -133,15 +133,15 @@
       <div id="board-menu" class="dnone-menu dnone">
         <ul>
           <li>
-            <a href="/auth/noticeBoard">공지사항</a>
+            <a href="/board/boardList">공지사항</a>
           </li>
           <li>
 
-            <a href="/auth/noticeBoard">게시글 보기</a>
+            <a href="/board/boardList">게시글 보기</a>
 
           </li>
           <li>
-            <a href="/auth/noticeBoard">후기</a>
+            <a href="/board/boardList">후기</a>
           </li>
         </ul>
       </div>

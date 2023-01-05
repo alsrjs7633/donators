@@ -92,7 +92,7 @@ public class MainController {
 		return "myPurchasedList";
 	}
 	
-	@GetMapping("/findLoc")
+	@GetMapping("/auth/findLoc")
 	public String findLoc() {
 		return "findLoc";
 	}

@@ -97,7 +97,7 @@
         </ul>
       </div>
     </div> --%>
-  
+  </div>
 <%@ include file="../layout/footer.jsp"%>
 
 <script type="text/javascript">
@@ -200,5 +200,4 @@
     
 
   
-<%@ include file="../layout/footer.jsp"%>  
 

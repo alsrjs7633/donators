@@ -60,26 +60,19 @@
         <label class="form_name">성별</label>
         <div class="agree">
           <label class="inputCheck">
-<<<<<<< HEAD
             <input type="radio" name="genderch" id="man" value="MO"> 남
           </label>
           <label class="inputCheck">
             <input type="radio" name="genderch"  id="woman" value="WO"> 여
-=======
-            <input type="radio" name="genderch" id="man" value="man"> 남
-          </label>
-          <label class="inputCheck">
-            <input type="radio" name="genderch"  id="woman" value="woman"> 여
->>>>>>> jaehyuntest
+
           </label>
         </div>
       </div>
       <div class="form_group">
             <h3>지역</h3>
-            <div class="fil_select">
-              <select class="filt_select" id="area_select">
+            <div class="fil_select" style="height:28px;">
+              <select class="filt_select" id="area_select" style="height:28px;">
                 <option value="-1" selected>전체</option>
-<<<<<<< HEAD
                 <option value="AP">서울</option>
                 <optino value="BP">경기도</optino>
                 <option value="CP">강원도</option>
@@ -89,17 +82,6 @@
                 <option value="GP">경상북도</option>
                 <option value="HP">전라남도</option>
                 <option value="IP">전라북도</option>
-=======
-                <option value="SE">서울</option>
-                <optino value="GE">경기도</optino>
-                <option value="GA">강원도</option>
-                <option value="CN">충청남도</option>
-                <option value="CB">충청북도</option>
-                <option value="GN">경상남도</option>
-                <option value="GB">경상북도</option>
-                <option value="JN">전라남도</option>
-                <option value="JB">전라북도</option>
->>>>>>> jaehyuntest
               </select>
             </div>
           </div>
@@ -114,13 +96,7 @@
           </label>
         </div>
       </div>
-<<<<<<< HEAD
 
-=======
-      
-     
-      
->>>>>>> jaehyuntest
       <div class="joinAgree">
         <h2 style="font-size:32px">약관 및 개인정보 수집,이용 동의</h2>
         <hr>
